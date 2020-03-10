@@ -94,7 +94,7 @@ public abstract class ActionTest {
 
         if (action instanceof UpSwipe){
             e = new Pair<>(t, new int[][]{{16,8,4,2},{-1,-1,-1,-1},{-1,-1,-1,-1},{-1,-1,-1,-1}});
-            e2 = new Pair<>(t2, new int[][]{{2,2,4,4},{-1,-1,-1,-1},{-1,-1,-1,-1},{4,4,-1,-1}});
+            e2 = new Pair<>(t2, new int[][]{{2,2,4,4},{4,4,-1,-1},{-1,-1,-1,-1},{-1,-1,-1,-1}});
         }
         else if (action instanceof RightSwipe){
             e = new Pair<>(t, new int[][]{{-1,-1,-1,2},{-1,-1,-1,4},{-1,-1,-1,8},{-1,-1,-1,16}});
@@ -102,7 +102,7 @@ public abstract class ActionTest {
         }
         else if (action instanceof DownSwipe){
             e = new Pair<>(t, new int[][]{{-1,-1,-1,-1},{-1,-1,-1,-1},{-1,-1,-1,-1},{16,8,4,2}});
-            e2 = new Pair<>(t2, new int[][]{{2,2,-1,-1},{-1,-1,-1,-1},{-1,-1,-1,-1},{4,4,4,4}});
+            e2 = new Pair<>(t2, new int[][]{{-1,-1,-1,-1},{-1,-1,-1,-1},{2,2,-1,-1},{4,4,4,4}});
         }
         else if (action instanceof LeftSwipe){
             e = new Pair<>(t, new int[][]{{2,-1,-1,-1},{4,-1,-1,-1},{8,-1,-1,-1},{16,-1,-1,-1}});
