@@ -3,4 +3,9 @@ public class UpSwipe implements Action {
     public State getResult(State state) {
         return null;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        return(o instanceof UpSwipe);
+    }
 }
