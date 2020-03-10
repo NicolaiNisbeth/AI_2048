@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="fcdb36c5-c2d9-4010-823a-a03b3ba84944" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/action/DownSwipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/action/DownSwipe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/action/LeftSwipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/action/LeftSwipe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/action/RightSwipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/action/RightSwipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/action/UpSwipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/action/UpSwipe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +61,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DownSwipeTest and 3 more">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="AI_2048" />
@@ -66,17 +69,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DownSwipeTest and 3 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DownSwipeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AI_2048" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ActionTest" />
-      <option name="TEST_OBJECT" value="pattern" />
-      <patterns>
-        <pattern testClass="DownSwipeTest" />
-        <pattern testClass="LeftSwipeTest" />
-        <pattern testClass="RightSwipeTest" />
-        <pattern testClass="UpSwipeTest" />
-      </patterns>
+      <option name="MAIN_CLASS_NAME" value="DownSwipeTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -90,33 +87,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LeftSwipeTest.validateAction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LeftSwipeTest.validateAction (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AI_2048" />
-      <option name="PACKAGE_NAME" value="model.action" />
-      <option name="MAIN_CLASS_NAME" value="model.action.LeftSwipeTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LeftSwipeTest" />
       <option name="METHOD_NAME" value="validateAction" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UpSwipeTest.validateAction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RightSwipeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AI_2048" />
-      <option name="PACKAGE_NAME" value="model.action" />
-      <option name="MAIN_CLASS_NAME" value="model.action.UpSwipeTest" />
-      <option name="METHOD_NAME" value="validateAction" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RightSwipeTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DownSwipeTest and 3 more" />
-        <item itemvalue="JUnit.LeftSwipeTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.LeftSwipeTest.validateAction" />
-        <item itemvalue="JUnit.LeftSwipeTest.validateAction" />
+        <item itemvalue="JUnit.DownSwipeTest" />
+        <item itemvalue="JUnit.DownSwipeTest" />
+        <item itemvalue="JUnit.RightSwipeTest" />
+        <item itemvalue="JUnit.LeftSwipeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -130,7 +126,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583826593671</updated>
-      <workItem from="1583826596305" duration="23265000" />
+      <workItem from="1583826596305" duration="26522000" />
     </task>
     <task id="LOCAL-00001" summary="Checking action legality">
       <created>1583829205007</created>
@@ -314,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583852439513</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Left Right working">
+      <created>1583853031585</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1583853031585</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +345,8 @@
     <MESSAGE value="File structure" />
     <MESSAGE value="Moved AI into subfolder" />
     <MESSAGE value="Bugfix &amp; Dumbo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bugfix &amp; Dumbo" />
+    <MESSAGE value="Left Right working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Left Right working" />
   </component>
   <component name="WindowStateProjectService">
     <state x="803" y="266" width="374" height="582" key="#com.intellij.ide.util.MemberChooser" timestamp="1583852324674">
@@ -361,26 +365,26 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="747" y="161" width="476" height="799" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1583850361369" />
-    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2" timestamp="1583852439467">
+    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2" timestamp="1583853031543">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1583852439467" />
-    <state width="1804" height="83" key="GridCell.Tab.0.bottom" timestamp="1583852725927">
+    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1583853031543" />
+    <state width="1804" height="319" key="GridCell.Tab.0.bottom" timestamp="1583856138386">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="83" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1583852725927" />
-    <state width="1804" height="83" key="GridCell.Tab.0.center" timestamp="1583852725926">
+    <state width="1804" height="319" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1583856138386" />
+    <state width="1804" height="319" key="GridCell.Tab.0.center" timestamp="1583856138386">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="83" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1583852725926" />
-    <state width="1804" height="83" key="GridCell.Tab.0.left" timestamp="1583852725926">
+    <state width="1804" height="319" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1583856138386" />
+    <state width="1804" height="319" key="GridCell.Tab.0.left" timestamp="1583856138386">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="83" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1583852725926" />
-    <state width="1804" height="83" key="GridCell.Tab.0.right" timestamp="1583852725927">
+    <state width="1804" height="319" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1583856138386" />
+    <state width="1804" height="319" key="GridCell.Tab.0.right" timestamp="1583856138386">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="83" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1583852725927" />
+    <state width="1804" height="319" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1583856138386" />
     <state width="1804" height="330" key="GridCell.Tab.1.bottom" timestamp="1583840292990">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -401,18 +405,18 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="700" y="271" width="580" height="571" key="MultipleFileMergeDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1583845759628" />
-    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1583852441049">
+    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1583853032829">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1583852441049" />
+    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1583853032829" />
     <state x="648" y="150" width="683" height="813" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583840271453">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="648" y="150" width="683" height="813" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1583840271453" />
-    <state x="763" y="473" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583852954822">
+    <state x="763" y="473" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583855923933">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="763" y="473" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/70.27.1850.1053@70.27.1850.1053" timestamp="1583852954822" />
+    <state x="763" y="473" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/70.27.1850.1053@70.27.1850.1053" timestamp="1583855923933" />
     <state x="658" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1583838670697">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>

@@ -1,4 +1,5 @@
 import controller.AI;
+import controller.jd.Dumbo;
 import controller.jd.Random;
 import model.heuristic.ScoreHeuristic;
 import model.State;
@@ -9,16 +10,12 @@ import view.TextGUI;
 import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws InterruptedException {
         int score = 0;
-        for (int i = 0; i < 1_000_000; i++) {
+        for (int i = 0; i < 1000; i++) {
             int[][] board = setupBoard();
             State state = new State(board);
-            GUI gui = new TextGUI();
-            //gui.show(state);
             AI ai = new Random();
-            ai.setHeuristics(new ScoreHeuristic());
             while(true) {
                 Action action = ai.getAction(state);
                 if(action == null){
@@ -29,7 +26,6 @@ public class Main {
                 }
                 state = action.getResult(state);
                 state.spawn();
-                //gui.show(state);
             }
         }
         System.out.println(score);
