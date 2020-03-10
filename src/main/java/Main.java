@@ -15,6 +15,7 @@ public class Main {
         for (int i = 0; i < 500; i++) {
             Action action = ai.getAction(state);
             state = action.getResult(state);
+            state.spawn();
             gui.show(state);
             Thread.sleep(1000);
         }
