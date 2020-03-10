@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcdb36c5-c2d9-4010-823a-a03b3ba84944" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI_2048.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AI_2048.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JDAI_MinMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JD_Random.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LeftSwipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LeftSwipe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RightSwipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RightSwipe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +126,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583826593671</updated>
-      <workItem from="1583826596305" duration="18470000" />
+      <workItem from="1583826596305" duration="19263000" />
     </task>
     <task id="LOCAL-00001" summary="Checking action legality">
       <created>1583829205007</created>
@@ -273,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583845750179</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Random ai implemented">
+      <created>1583847685921</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1583847685921</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,33 +298,34 @@
     <MESSAGE value="Bugfix" />
     <MESSAGE value="Bugs in the workings" />
     <MESSAGE value="Ready squire" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ready squire" />
+    <MESSAGE value="Random ai implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Random ai implemented" />
   </component>
   <component name="WindowStateProjectService">
     <state x="803" y="266" width="374" height="582" key="#com.intellij.ide.util.MemberChooser" timestamp="1583837828289">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="803" y="266" width="374" height="582" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1583837828289" />
-    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2" timestamp="1583845750142">
+    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2" timestamp="1583847685868">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1583845750142" />
-    <state width="902" height="247" key="GridCell.Tab.0.bottom" timestamp="1583847652842">
+    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1583847685868" />
+    <state width="902" height="319" key="GridCell.Tab.0.bottom" timestamp="1583848437300">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="902" height="247" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1583847652842" />
-    <state width="902" height="247" key="GridCell.Tab.0.center" timestamp="1583847652842">
+    <state width="902" height="319" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1583848437300" />
+    <state width="902" height="319" key="GridCell.Tab.0.center" timestamp="1583848437299">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="902" height="247" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1583847652842" />
-    <state width="902" height="247" key="GridCell.Tab.0.left" timestamp="1583847652842">
+    <state width="902" height="319" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1583848437299" />
+    <state width="902" height="319" key="GridCell.Tab.0.left" timestamp="1583848437299">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="902" height="247" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1583847652842" />
-    <state width="902" height="247" key="GridCell.Tab.0.right" timestamp="1583847652842">
+    <state width="902" height="319" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1583848437299" />
+    <state width="902" height="319" key="GridCell.Tab.0.right" timestamp="1583848437300">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="902" height="247" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1583847652842" />
+    <state width="902" height="319" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1583848437300" />
     <state width="1804" height="330" key="GridCell.Tab.1.bottom" timestamp="1583840292990">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -343,10 +346,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="700" y="271" width="580" height="571" key="MultipleFileMergeDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1583845759628" />
-    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1583841570760">
+    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1583847687221">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1583841570760" />
+    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1583847687221" />
     <state x="648" y="150" width="683" height="813" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583840271453">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>

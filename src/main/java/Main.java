@@ -2,26 +2,29 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        int[][] board = setupBoard();
-        State state = new State(board);
-        GUI gui = new TextGUI();
-        gui.show(state);
-        AI ai = new JD_Random();
-        ai.setHeuristics(new ScoreHeuristic());
-        for (int i = 0; i < 500; i++) {
-            Action action = ai.getAction(state);
-            System.out.println();
-            System.out.println(action);
-            if(action == null){
-                System.out.println(new ScoreHeuristic().getValue(state));
-                break;
+
+        int score = 0;
+        for (int i = 0; i < 1_000_000; i++) {
+            int[][] board = setupBoard();
+            State state = new State(board);
+            GUI gui = new TextGUI();
+            //gui.show(state);
+            AI ai = new JD_Random();
+            ai.setHeuristics(new ScoreHeuristic());
+            while(true) {
+                Action action = ai.getAction(state);
+                if(action == null){
+                    int value = new ScoreHeuristic().getValue(state);
+                    if(value > score)
+                        score = value;
+                    break;
+                }
+                state = action.getResult(state);
+                state.spawn();
+                //gui.show(state);
             }
-            state = action.getResult(state);
-            state.spawn();
-            System.out.println();
-            gui.show(state);
-            Thread.sleep(100);
         }
+        System.out.println(score);
     }
 
     public static int[][] setupBoard(){
