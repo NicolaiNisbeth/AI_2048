@@ -16,17 +16,15 @@ public class LeftSwipe implements Action {
                 if(value != -1){
                     if(head != j){
                         if(board[i][head] == value){
-
+                            board[i][head++] += value;
+                            board[i][j] = -1;
                         } else {
-                            board[i][head++] = value;
+                            board[i][head] = value;
                             board[i][j] = -1;
                         }
                     } else {
-                        if(board[i][head] == value){
-                            board[i][head] += value;
-                            board[i][j] = -1;
-                        }
-                        head++;
+                        if(board[i][head] != value)
+                            head++;
                     }
                 }
             }
