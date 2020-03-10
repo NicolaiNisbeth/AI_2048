@@ -10,24 +10,28 @@ public class DownSwipe implements Action {
         for (int j = 0; j < board.length; j++) {
             int emptySquareCount = 0;
             int head = board[j].length-1;
-            for (int i = 0; i < board[j].length; i++) {
+            for (int i = board[j].length-1; i >= 0; i--) {
                 if(board[i][j] != -1){
                     if(head == board[j].length-1){
                         board[head--][j] = board[i][j];
+                        board[i][j] = -1;
                     } else {
                         if(board[head+1][j] == board[i][j]){
                             board[head+1][j] += board[i][j];
                             emptySquareCount++;
+                        } else {
+                            board[head--][j] = board[i][j];
+                            board[i][j] = -1;
                         }
                     }
                 } else {
                     emptySquareCount++;
                 }
-            }
-            boolean lastIteration = j == board.length -1;
-            if(lastIteration){
-                for (int i = 0; i < emptySquareCount; i++) {
-                    emptySquares.add(new Pair<>(i,j));
+                boolean lastIteration = i == board.length -1;
+                if(lastIteration){
+                    for (int k = 0; k < emptySquareCount; k++) {
+                        emptySquares.add(new Pair<>(k,j));
+                    }
                 }
             }
         }
