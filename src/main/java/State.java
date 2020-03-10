@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -71,6 +72,14 @@ public class State {
 
     public int[][] getBoard() {
         return board;
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if(o instanceof State){
+            return Arrays.deepEquals(board, ((State) o).board);
+        }
+        return false;
     }
 
 
