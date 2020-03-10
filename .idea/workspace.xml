@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fcdb36c5-c2d9-4010-823a-a03b3ba84944" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="jdai" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YvcdDYAZc4MoK5rFrbOuJb7SPi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="AI_2048" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fcdb36c5-c2d9-4010-823a-a03b3ba84944" name="Default Changelist" comment="" />
+      <created>1583826593671</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583826593671</updated>
+      <workItem from="1583826596305" duration="16346000" />
+    </task>
+    <task id="LOCAL-00001" summary="Checking action legality">
+      <created>1583829205007</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583829205007</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Maven file structure">
+      <created>1583829326792</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583829326792</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Implementing action interface">
+      <created>1583829368758</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583829368758</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Initial state">
+      <created>1583829695795</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1583829695795</updated>
+    </task>
+    <task id="LOCAL-00005" summary="GUI">
+      <created>1583830493942</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1583830493942</updated>
+    </task>
+    <task id="LOCAL-00006" summary="GUI Input">
+      <created>1583831318063</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1583831318063</updated>
+    </task>
+    <task id="LOCAL-00007" summary="GUI Input">
+      <created>1583832171747</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1583832171747</updated>
+    </task>
+    <task id="LOCAL-00008" summary="GUI Input">
+      <created>1583832289471</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1583832289471</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Copy board">
+      <created>1583833128055</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1583833128055</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fixed downswipe bug">
+      <created>1583833463127</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1583833463127</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Ready for unit test">
+      <created>1583834881643</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1583834881643</updated>
+    </task>
+    <task id="LOCAL-00012" summary="maven 11 jdk java version not jdk or maven">
+      <created>1583835114207</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1583835114207</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Pair">
+      <created>1583835909679</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1583835909679</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Pair">
+      <created>1583836609740</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1583836609740</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Removed spawn from DownSwipe">
+      <created>1583838271602</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1583838271602</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Not working :(">
+      <created>1583839838160</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1583839838160</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Bugfix">
+      <created>1583840318887</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1583840318887</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Bugfix">
+      <created>1583840526142</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1583840526142</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Bugs in the workings">
+      <created>1583841569398</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1583841569398</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Checking action legality" />
+    <MESSAGE value="Maven file structure" />
+    <MESSAGE value="Implementing action interface" />
+    <MESSAGE value="Initial state" />
+    <MESSAGE value="GUI" />
+    <MESSAGE value="GUI Input" />
+    <MESSAGE value="Copy board" />
+    <MESSAGE value="Fixed downswipe bug" />
+    <MESSAGE value="Ready for unit test" />
+    <MESSAGE value="maven 11 jdk java version not jdk or maven" />
+    <MESSAGE value="Pair" />
+    <MESSAGE value="Removed spawn from DownSwipe" />
+    <MESSAGE value="Not working :(" />
+    <MESSAGE value="Bugfix" />
+    <MESSAGE value="Bugs in the workings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bugs in the workings" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="803" y="266" width="374" height="582" key="#com.intellij.ide.util.MemberChooser" timestamp="1583837828289">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="803" y="266" width="374" height="582" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1583837828289" />
+    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2" timestamp="1583841569358">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1583841569358" />
+    <state width="1804" height="292" key="GridCell.Tab.0.bottom" timestamp="1583845731461">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="292" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1583845731461" />
+    <state width="1804" height="292" key="GridCell.Tab.0.center" timestamp="1583845731459">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="292" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1583845731459" />
+    <state width="1804" height="292" key="GridCell.Tab.0.left" timestamp="1583845731457">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="292" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1583845731457" />
+    <state width="1804" height="292" key="GridCell.Tab.0.right" timestamp="1583845731460">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="292" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1583845731460" />
+    <state width="1804" height="330" key="GridCell.Tab.1.bottom" timestamp="1583840292990">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="330" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1583840292990" />
+    <state width="1804" height="330" key="GridCell.Tab.1.center" timestamp="1583840292990">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="330" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1583840292990" />
+    <state width="1804" height="330" key="GridCell.Tab.1.left" timestamp="1583840292989">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="330" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1583840292989" />
+    <state width="1804" height="330" key="GridCell.Tab.1.right" timestamp="1583840292990">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="330" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1583840292990" />
+    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1583841570760">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1583841570760" />
+    <state x="648" y="150" width="683" height="813" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583840271453">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="648" y="150" width="683" height="813" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1583840271453" />
+    <state x="763" y="473" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583845718000">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="763" y="473" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/70.27.1850.1053@70.27.1850.1053" timestamp="1583845718000" />
+    <state x="658" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1583838670697">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="658" y="259" width="672" height="678" key="search.everywhere.popup/70.27.1850.1053@70.27.1850.1053" timestamp="1583838670697" />
+  </component>
+</project>
