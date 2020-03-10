@@ -1,5 +1,3 @@
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -32,6 +30,7 @@ public class State {
         return actions;
     }
 
+    //TODO: Allow swiping for merge (fx whole board is 2s)
     private boolean[] calculateDirectionLegality() {
         boolean[] directions = new boolean[4];
 
@@ -52,8 +51,16 @@ public class State {
         return directions;
     }
 
-    private void spawn(int[][] board) {
-        throw new NotImplementedException();
+    public void spawn() {
+        //Dummy implementation
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                if(board[i][j] == -1){
+                    board[i][j] = 2;
+                    break;
+                }
+            }
+        }
     }
 
     public int[][] getBoard() {
