@@ -1,3 +1,5 @@
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -48,6 +50,10 @@ public class State {
         }
 
         return directions;
+    }
+
+    private void spawn(int[][] board) {
+        throw new NotImplementedException();
     }
 
     public int[][] getBoard() {
