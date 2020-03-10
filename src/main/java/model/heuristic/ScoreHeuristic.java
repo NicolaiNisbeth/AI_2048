@@ -1,4 +1,8 @@
-public class ScoreHeuristic implements Heuristics {
+package model.heuristic;
+
+import model.State;
+
+public class ScoreHeuristic implements Heuristic {
     @Override
     public int getValue(State state) {
         int[][] board = state.getBoard();

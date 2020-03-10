@@ -1,4 +1,9 @@
-import java.util.ArrayList;
+package controller;
+
+import model.State;
+import model.action.Action;
+import model.heuristic.Heuristic;
+
 import java.util.Iterator;
 import java.util.Set;
 
@@ -20,7 +25,7 @@ public class JD_Random implements AI {
     }
 
     @Override
-    public void setHeuristics(Heuristics heuristics) {
+    public void setHeuristics(Heuristic heuristic) {
 
     }
 

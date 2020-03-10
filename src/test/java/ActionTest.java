@@ -1,3 +1,8 @@
+import model.State;
+import model.action.Action;
+import util.Pair;
+import view.TextGUI;
+
 import static org.junit.Assert.assertEquals;
 
 public abstract class ActionTest {
@@ -10,14 +15,14 @@ public abstract class ActionTest {
     protected abstract Action createAction();
 
     @org.junit.Before
-    public void setUp() throws Exception {
+    public void setUp() {
         action = createAction();
         initialState = new State(Main.setupBoard());
         textGUI = new TextGUI();
     }
 
     @org.junit.After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         action = null;
         initialState = null;
         textGUI = null;

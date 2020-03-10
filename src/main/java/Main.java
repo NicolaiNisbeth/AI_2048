@@ -1,7 +1,15 @@
+import controller.AI;
+import controller.JD_Random;
+import model.heuristic.ScoreHeuristic;
+import model.State;
+import model.action.Action;
+import view.GUI;
+import view.TextGUI;
+
 import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
         int score = 0;
         for (int i = 0; i < 1_000_000; i++) {

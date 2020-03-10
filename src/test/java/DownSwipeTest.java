@@ -1,3 +1,6 @@
+import model.action.Action;
+import model.action.DownSwipe;
+
 import java.util.Arrays;
 
 import static org.junit.Assert.*;

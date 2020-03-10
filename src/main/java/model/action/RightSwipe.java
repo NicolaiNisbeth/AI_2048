@@ -1,3 +1,8 @@
+package model.action;
+
+import model.State;
+import util.Utils;
+
 public class RightSwipe implements Action {
 
     @Override

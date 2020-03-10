@@ -1,3 +1,6 @@
+import model.action.Action;
+import model.action.UpSwipe;
+
 import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;

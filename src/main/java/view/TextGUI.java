@@ -1,3 +1,8 @@
+package view;
+
+import model.State;
+import model.action.*;
+
 import java.util.Scanner;
 
 public class TextGUI implements GUI {

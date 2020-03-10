@@ -1,3 +1,6 @@
+import model.action.Action;
+import model.action.LeftSwipe;
+
 import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
