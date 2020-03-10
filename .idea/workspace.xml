@@ -3,26 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fcdb36c5-c2d9-4010-823a-a03b3ba84944" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/action/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DownSwipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/action/DownSwipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Heuristics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Heuristics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JD_Random.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/JD_Random.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LeftSwipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/action/LeftSwipe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/Pair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RightSwipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/action/RightSwipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ScoreHeuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/ScoreHeuristic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TextGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/TextGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UpSwipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/action/UpSwipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ActionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ActionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DownSwipeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DownSwipeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LeftSwipeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LeftSwipeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RightSwipeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RightSwipeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UpSwipeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UpSwipeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/JD_Random.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/jd/Random.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +51,7 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="model.action" />
       <recent name="" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
@@ -148,7 +131,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583826593671</updated>
-      <workItem from="1583826596305" duration="20627000" />
+      <workItem from="1583826596305" duration="20874000" />
     </task>
     <task id="LOCAL-00001" summary="Checking action legality">
       <created>1583829205007</created>
@@ -311,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583849855631</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="File structure">
+      <created>1583850453089</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1583850453089</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,7 +326,8 @@
     <MESSAGE value="Ready squire" />
     <MESSAGE value="Random ai implemented" />
     <MESSAGE value="Running random AI 1 million times, getting 168 as max score" />
-    <option name="LAST_COMMIT_MESSAGE" value="Running random AI 1 million times, getting 168 as max score" />
+    <MESSAGE value="File structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="File structure" />
   </component>
   <component name="WindowStateProjectService">
     <state x="803" y="266" width="374" height="582" key="#com.intellij.ide.util.MemberChooser" timestamp="1583837828289">
@@ -355,10 +346,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="747" y="161" width="476" height="799" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1583850361369" />
-    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2" timestamp="1583850432223">
+    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2" timestamp="1583850453024">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1583850432223" />
+    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1583850453024" />
     <state width="902" height="319" key="GridCell.Tab.0.bottom" timestamp="1583850432271">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -395,10 +386,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="700" y="271" width="580" height="571" key="MultipleFileMergeDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1583845759628" />
-    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1583849856939">
+    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1583850454553">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1583849856939" />
+    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1583850454553" />
     <state x="648" y="150" width="683" height="813" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583840271453">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>

@@ -1,5 +1,6 @@
-package controller;
+package controller.jd;
 
+import controller.AI;
 import model.State;
 import model.action.Action;
 import model.heuristic.Heuristic;
@@ -7,7 +8,7 @@ import model.heuristic.Heuristic;
 import java.util.Iterator;
 import java.util.Set;
 
-public class JD_Random implements AI {
+public class Random implements AI {
 
     @Override
     public Action getAction(State state) {

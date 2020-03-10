@@ -1,5 +1,5 @@
 import controller.AI;
-import controller.JD_Random;
+import controller.jd.Random;
 import model.heuristic.ScoreHeuristic;
 import model.State;
 import model.action.Action;
@@ -17,7 +17,7 @@ public class Main {
             State state = new State(board);
             GUI gui = new TextGUI();
             //gui.show(state);
-            AI ai = new JD_Random();
+            AI ai = new Random();
             ai.setHeuristics(new ScoreHeuristic());
             while(true) {
                 Action action = ai.getAction(state);
