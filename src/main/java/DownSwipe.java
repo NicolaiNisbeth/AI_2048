@@ -1,5 +1,3 @@
-import com.sun.tools.javac.util.Pair;
-
 import java.util.ArrayList;
 
 public class DownSwipe implements Action {
@@ -45,7 +43,7 @@ public class DownSwipe implements Action {
         int random = (int) (Math.random() * count);
         Pair<Integer, Integer> coordinates = emptySquares.get(random);
         int valueToSpawn = (Math.random() > 0.9) ? 4 : 2;
-        board[coordinates.fst][coordinates.snd] = valueToSpawn;
+        board[coordinates.getFirst()][coordinates.getSecond()] = valueToSpawn;
     }
 
     @Override
