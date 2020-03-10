@@ -19,15 +19,12 @@ public class RightSwipe implements Action {
                             board[i][head--] += value;
                             board[i][j] = -1;
                         } else {
-                            board[i][head--] = value;
+                            board[i][head] = value;
                             board[i][j] = -1;
                         }
                     } else {
-                        if(board[i][head] == value){
-                            board[i][head] += value;
-                            board[i][j] = -1;
-                        }
-                        head--;
+                        if(board[i][head] != value)
+                            head--;
                     }
                 }
             }
