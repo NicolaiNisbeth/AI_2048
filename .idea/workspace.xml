@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcdb36c5-c2d9-4010-823a-a03b3ba84944" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI_2048.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AI_2048.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JDAI_MinMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JD_Random.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LeftSwipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LeftSwipe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RightSwipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RightSwipe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +58,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="AI_2048" />
@@ -60,9 +66,58 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DownSwipeTest and 3 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AI_2048" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ActionTest" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="DownSwipeTest" />
+        <pattern testClass="LeftSwipeTest" />
+        <pattern testClass="RightSwipeTest" />
+        <pattern testClass="UpSwipeTest" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DownSwipeTest.validateAction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AI_2048" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DownSwipeTest" />
+      <option name="METHOD_NAME" value="validateAction" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LeftSwipeTest.validateAction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AI_2048" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LeftSwipeTest" />
+      <option name="METHOD_NAME" value="validateAction" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UpSwipeTest.validateAction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AI_2048" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UpSwipeTest" />
+      <option name="METHOD_NAME" value="validateAction" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.LeftSwipeTest.validateAction" />
+        <item itemvalue="JUnit.LeftSwipeTest.validateAction" />
+        <item itemvalue="JUnit.LeftSwipeTest.validateAction" />
+        <item itemvalue="JUnit.UpSwipeTest.validateAction" />
       </list>
     </recent_temporary>
   </component>
@@ -76,7 +131,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583826593671</updated>
-      <workItem from="1583826596305" duration="16346000" />
+      <workItem from="1583826596305" duration="18470000" />
     </task>
     <task id="LOCAL-00001" summary="Checking action legality">
       <created>1583829205007</created>
@@ -211,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583841569398</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Ready squire">
+      <created>1583845750179</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1583845750179</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,33 +295,34 @@
     <MESSAGE value="Not working :(" />
     <MESSAGE value="Bugfix" />
     <MESSAGE value="Bugs in the workings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bugs in the workings" />
+    <MESSAGE value="Ready squire" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ready squire" />
   </component>
   <component name="WindowStateProjectService">
     <state x="803" y="266" width="374" height="582" key="#com.intellij.ide.util.MemberChooser" timestamp="1583837828289">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="803" y="266" width="374" height="582" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1583837828289" />
-    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2" timestamp="1583841569358">
+    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2" timestamp="1583845750142">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1583841569358" />
-    <state width="1804" height="292" key="GridCell.Tab.0.bottom" timestamp="1583845731461">
+    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1583845750142" />
+    <state width="902" height="247" key="GridCell.Tab.0.bottom" timestamp="1583847652842">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="292" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1583845731461" />
-    <state width="1804" height="292" key="GridCell.Tab.0.center" timestamp="1583845731459">
+    <state width="902" height="247" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1583847652842" />
+    <state width="902" height="247" key="GridCell.Tab.0.center" timestamp="1583847652842">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="292" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1583845731459" />
-    <state width="1804" height="292" key="GridCell.Tab.0.left" timestamp="1583845731457">
+    <state width="902" height="247" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1583847652842" />
+    <state width="902" height="247" key="GridCell.Tab.0.left" timestamp="1583847652842">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="292" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1583845731457" />
-    <state width="1804" height="292" key="GridCell.Tab.0.right" timestamp="1583845731460">
+    <state width="902" height="247" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1583847652842" />
+    <state width="902" height="247" key="GridCell.Tab.0.right" timestamp="1583847652842">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="292" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1583845731460" />
+    <state width="902" height="247" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1583847652842" />
     <state width="1804" height="330" key="GridCell.Tab.1.bottom" timestamp="1583840292990">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -276,6 +339,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="1804" height="330" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1583840292990" />
+    <state x="700" y="271" width="580" height="571" key="MultipleFileMergeDialog" timestamp="1583845759628">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="700" y="271" width="580" height="571" key="MultipleFileMergeDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1583845759628" />
     <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1583841570760">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -284,10 +351,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="648" y="150" width="683" height="813" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1583840271453" />
-    <state x="763" y="473" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583845718000">
+    <state x="763" y="473" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583845752870">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="763" y="473" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/70.27.1850.1053@70.27.1850.1053" timestamp="1583845718000" />
+    <state x="763" y="473" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/70.27.1850.1053@70.27.1850.1053" timestamp="1583845752870" />
     <state x="658" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1583838670697">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>

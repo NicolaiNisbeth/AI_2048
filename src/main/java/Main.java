@@ -6,15 +6,21 @@ public class Main {
         State state = new State(board);
         GUI gui = new TextGUI();
         gui.show(state);
-        AI ai = new JDAI_MinMax();
+        AI ai = new JD_Random();
         ai.setHeuristics(new ScoreHeuristic());
         for (int i = 0; i < 500; i++) {
             Action action = ai.getAction(state);
+            System.out.println();
+            System.out.println(action);
+            if(action == null){
+                System.out.println(new ScoreHeuristic().getValue(state));
+                break;
+            }
             state = action.getResult(state);
             state.spawn();
             System.out.println();
             gui.show(state);
-            Thread.sleep(1000);
+            Thread.sleep(100);
         }
     }
 
