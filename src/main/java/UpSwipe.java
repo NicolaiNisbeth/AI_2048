@@ -16,6 +16,7 @@ public class UpSwipe implements Action {
                     } else {
                         if(board[head-1][j] == board[i][j]){
                             board[head-1][j] += board[i][j];
+                            board[i][j] = -1;
                         } else {
                             board[head][j] = board[i][j];
                             if(i != head){

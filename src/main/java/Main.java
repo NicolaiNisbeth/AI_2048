@@ -16,6 +16,7 @@ public class Main {
             Action action = ai.getAction(state);
             state = action.getResult(state);
             state.spawn();
+            System.out.println();
             gui.show(state);
             Thread.sleep(1000);
         }
