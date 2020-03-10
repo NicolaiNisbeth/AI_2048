@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcdb36c5-c2d9-4010-823a-a03b3ba84944" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/jd/Dumbo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/JD_Random.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/jd/Random.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +130,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583826593671</updated>
-      <workItem from="1583826596305" duration="20874000" />
+      <workItem from="1583826596305" duration="22635000" />
     </task>
     <task id="LOCAL-00001" summary="Checking action legality">
       <created>1583829205007</created>
@@ -301,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583850453089</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Moved AI into subfolder">
+      <created>1583850573273</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1583850573273</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,17 +333,18 @@
     <MESSAGE value="Random ai implemented" />
     <MESSAGE value="Running random AI 1 million times, getting 168 as max score" />
     <MESSAGE value="File structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="File structure" />
+    <MESSAGE value="Moved AI into subfolder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved AI into subfolder" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="803" y="266" width="374" height="582" key="#com.intellij.ide.util.MemberChooser" timestamp="1583837828289">
+    <state x="803" y="266" width="374" height="582" key="#com.intellij.ide.util.MemberChooser" timestamp="1583852324674">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="803" y="266" width="374" height="582" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1583837828289" />
-    <state x="616" y="481" width="758" height="152" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1583850072900">
+    <state x="803" y="266" width="374" height="582" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1583852324674" />
+    <state x="616" y="481" width="783" height="152" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1583850608836">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="616" y="481" width="758" height="152" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1583850072900" />
+    <state x="616" y="481" width="783" height="152" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1583850608836" />
     <state x="748" y="414" width="494" height="297" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1583850387455">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -346,10 +353,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="747" y="161" width="476" height="799" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1583850361369" />
-    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2" timestamp="1583850453024">
+    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2" timestamp="1583850573226">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1583850453024" />
+    <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1583850573226" />
     <state width="902" height="319" key="GridCell.Tab.0.bottom" timestamp="1583850432271">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -386,10 +393,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="700" y="271" width="580" height="571" key="MultipleFileMergeDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1583845759628" />
-    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1583850454553">
+    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1583850574725">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1583850454553" />
+    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1583850574725" />
     <state x="648" y="150" width="683" height="813" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583840271453">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
