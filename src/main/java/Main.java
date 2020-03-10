@@ -2,11 +2,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        int[][] board = new int[4][4];
-        for(int[] row : board)
-            Arrays.fill(row, -1);
-        int startLocation = (int) (Math.random() * 16);
-        board[startLocation/4][startLocation%4] = 2;
+        int[][] board = setupBoard();
         State state = new State(board);
         GUI gui = new TextGUI();
         gui.show(state);
@@ -20,5 +16,14 @@ public class Main {
             gui.show(state);
             Thread.sleep(1000);
         }
+    }
+
+    public static int[][] setupBoard(){
+        int[][] board = new int[4][4];
+        for(int[] row : board)
+            Arrays.fill(row, -1);
+        int startLocation = (int) (Math.random() * 16);
+        board[startLocation/4][startLocation%4] = 2;
+        return board;
     }
 }
