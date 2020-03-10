@@ -11,7 +11,9 @@ public class DownSwipe implements Action {
                 if(board[i][j] != -1){
                     if(head == board[j].length-1){
                         board[head--][j] = board[i][j];
-                        board[i][j] = -1;
+                        if(i != head){
+                            board[i][j] = -1;
+                        }
                     } else {
                         if(board[head+1][j] == board[i][j]){
                             board[head+1][j] += board[i][j];
