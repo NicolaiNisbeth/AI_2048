@@ -17,6 +17,30 @@ public class TextGUI implements GUI {
 
     @Override
     public Action getAction(State state) {
-        return null;
+        Action action;
+        do {
+            action = readAction();
+        } while(!state.getActions().contains(action));
+        return action;
+    }
+
+    private Action readAction() {
+        Action action = null;
+        System.out.println("Enter direction");
+        String line = scanner.nextLine();
+        char move = line.toUpperCase().charAt(0);
+        switch(move){
+            case 'U': action = new UpSwipe();
+                break;
+            case 'D': action = new DownSwipe();
+                break;
+            case 'L': action = new LeftSwipe();
+                break;
+            case 'R': action = new RightSwipe();
+                break;
+            default:
+                break;
+        }
+        return action;
     }
 }
