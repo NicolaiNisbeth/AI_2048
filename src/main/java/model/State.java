@@ -2,6 +2,7 @@ package model;
 
 import model.action.*;
 import util.Pair;
+import util.Utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -56,23 +57,6 @@ public class State {
         }
 
         return directions;
-    }
-
-    //TODO: Optimize
-    public void spawn() {
-        int emptyCount = 0;
-        ArrayList<Pair<Integer, Integer>> emptySquares = new ArrayList<>();
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board[i].length; j++) {
-                if(board[i][j] == -1){
-                    emptyCount++;
-                    emptySquares.add(new Pair<>(i, j));
-                }
-            }
-        }
-        int index = (int)(Math.random() * emptyCount);
-        Pair<Integer, Integer> coordinates = emptySquares.get(index);
-        board[coordinates.getFirst()][coordinates.getSecond()] = Math.random() > 0.9 ? 4 : 2;
     }
 
     public int[][] getBoard() {
