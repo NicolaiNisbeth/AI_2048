@@ -11,6 +11,8 @@ import util.Utils;
 import java.util.ArrayList;
 import java.util.Stack;
 
+import static util.Utils.*;
+
 public class Pseudo implements AI {
     // DFS
     private Stack<State> frontier = new Stack<>();
@@ -93,20 +95,19 @@ public class Pseudo implements AI {
         if (parent.getActions().isEmpty() || depthLimit == 0)
             return new ScoreHeuristic().getValue(parent);
 
-        // Compute random tile states, 2*n, n is empty tiles
+        // Compute random tile states, 2*n, n is empty squares
         ArrayList<State> children = new ArrayList<>();
-        for (Pair<Integer, Integer> coordinates : Utils.getEmptySquares(parent)){
-            State state_rand2 = new State(Utils.copyBoard(parent));
-            State state_rand4 = new State(Utils.copyBoard(parent));
+        for (Pair<Integer, Integer> coordinates : getEmptySquares(parent)){
+            State state_rand2 = new State(copyBoard(parent));
+            State state_rand4 = new State(copyBoard(parent));
 
-            Utils.spawn(state_rand2, coordinates, 2);
-            Utils.spawn(state_rand4, coordinates, 4);
+            spawn(state_rand2, coordinates, 2);
+            spawn(state_rand4, coordinates, 4);
 
             children.add(state_rand2);
             children.add(state_rand4);
         }
 
-        // Evaluate the board state taking all possible positions of random tile into account
         int minValue = Integer.MAX_VALUE;
         for (State child : children){
             minValue = Math.min(minValue, maximize(child, alpha, beta, depthLimit-1));
