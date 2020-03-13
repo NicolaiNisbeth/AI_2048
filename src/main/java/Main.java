@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         int score = 0;
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 100; i++) {
             int[][] board = setupBoard();
             State state = new State(board);
             AI ai = new Pseudo();

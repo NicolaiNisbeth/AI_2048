@@ -6,7 +6,6 @@ import model.action.Action;
 import model.heuristic.Heuristic;
 import model.heuristic.ScoreHeuristic;
 import util.Pair;
-import util.Utils;
 
 import java.util.ArrayList;
 import java.util.Stack;
@@ -95,17 +94,15 @@ public class Pseudo implements AI {
         if (parent.getActions().isEmpty() || depthLimit == 0)
             return new ScoreHeuristic().getValue(parent);
 
-        // Compute random tile states, 2*n, n is empty squares
+        // Compute random tile states
         ArrayList<State> children = new ArrayList<>();
+        State temp = new State(copyBoard(parent));
         for (Pair<Integer, Integer> coordinates : getEmptySquares(parent)){
-            State state_rand2 = new State(copyBoard(parent));
-            State state_rand4 = new State(copyBoard(parent));
-
-            spawn(state_rand2, coordinates, 2);
-            spawn(state_rand4, coordinates, 4);
-
-            children.add(state_rand2);
-            children.add(state_rand4);
+            spawn(temp, coordinates, 2);
+            children.add(temp);
+            spawn(temp, coordinates, 4);
+            children.add(temp);
+            spawn(temp, coordinates, -1);
         }
 
         int minValue = Integer.MAX_VALUE;
