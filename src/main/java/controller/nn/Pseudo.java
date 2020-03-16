@@ -4,7 +4,7 @@ import controller.AI;
 import model.State;
 import model.action.Action;
 import model.heuristic.Heuristic;
-import model.heuristic.ScoreHeuristic;
+import model.heuristic.nn.NnHeauristic;
 import util.Pair;
 
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ public class Pseudo implements AI {
             State parent = frontier.pop();
             for (Action action : parent.getActions()){
                 State child = action.getResult(parent);
-                int value = minimax(child, true);
+                int value = minimax(child);
 
                 if(value > maxValue){
                     maxValue = value;
@@ -39,18 +39,14 @@ public class Pseudo implements AI {
 
     /**
      *
-     * @param result
-     * @param maxStarts
+     * @param parent
      * @return
      */
-    private int minimax(State result, boolean maxStarts) {
-        int alpha = Integer.MIN_VALUE, beta = Integer.MAX_VALUE;
-        int depthLimit = 5;
-
-        if (maxStarts)
-            return maximize(result, alpha, beta, depthLimit);
-        else
-            return minimize(result, alpha, beta, depthLimit);
+    private int minimax(State parent) {
+        int alpha = Integer.MIN_VALUE;  // lower bound on what MAX can achieve
+        int beta = Integer.MAX_VALUE;   // upper bound on what MIN can achieve
+        int depthLimit = 3;
+        return maximize(parent, alpha, beta, depthLimit);
     }
 
     /**
@@ -62,23 +58,22 @@ public class Pseudo implements AI {
      * @return
      */
     private int maximize(State parent, int alpha, int beta, int depthLimit) {
-        // evaluate board at leaf node
+        // evaluate board at leaf node or depth limit is reached
         if (parent.getActions().isEmpty() || depthLimit == 0)
-            return new ScoreHeuristic().getValue(parent);
+            return new NnHeauristic().getValue(parent);
 
-        int maxValue = Integer.MIN_VALUE;
+        int value = Integer.MIN_VALUE;
         for (Action action : parent.getActions()){
             State child = action.getResult(parent);
-            maxValue = Math.max(maxValue, minimize(child, alpha, beta, depthLimit-1));
+            value = Math.max(value, minimize(child, alpha, beta, depthLimit-1));
+            alpha = Math.max(value, alpha);
 
-            // pruning
-            if (maxValue >= beta)
+            // beta-cut
+            if (value >= beta)
                 break;
-
-            alpha = Math.max(maxValue, alpha);
         }
 
-        return maxValue;
+        return value;
     }
 
     /**
@@ -90,9 +85,9 @@ public class Pseudo implements AI {
      * @return
      */
     private int minimize(State parent, int alpha, int beta, int depthLimit) {
-        // evaluate board at leaf node
+        // evaluate board at leaf node or depth limit is reached
         if (parent.getActions().isEmpty() || depthLimit == 0)
-            return new ScoreHeuristic().getValue(parent);
+            return new NnHeauristic().getValue(parent);
 
         // Compute random tile states
         ArrayList<State> children = new ArrayList<>();
@@ -105,18 +100,17 @@ public class Pseudo implements AI {
             spawn(temp, coordinates, -1);
         }
 
-        int minValue = Integer.MAX_VALUE;
+        int value = Integer.MAX_VALUE;
         for (State child : children){
-            minValue = Math.min(minValue, maximize(child, alpha, beta, depthLimit-1));
+            value = Math.min(value, maximize(child, alpha, beta, depthLimit-1));
+            beta = Math.min(value, beta);
 
-            // pruning
-            if (minValue <= alpha)
+            // alpha-cut
+            if (value <= alpha)
                 break;
-
-            beta = Math.min(minValue, beta);
         }
 
-        return minValue;
+        return value;
     }
 
     @Override

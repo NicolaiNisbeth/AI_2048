@@ -4,19 +4,27 @@ import model.heuristic.ScoreHeuristic;
 import model.State;
 import model.action.Action;
 import util.Utils;
+import view.GUI;
+import view.TextGUI;
 
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
+        TextGUI textGUI = new TextGUI();
         int score = 0;
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1000; i++) {
             int[][] board = setupBoard();
             State state = new State(board);
             AI ai = new Pseudo();
             while(!state.getActions().isEmpty()) {
                 Action action = ai.getAction(state);
+                /*
+                Thread.sleep(250);
+                textGUI.show(state);
+                System.out.println(action);
 
+                 */
                 int value = new ScoreHeuristic().getValue(state);
                 if(value > score)
                     score = value;

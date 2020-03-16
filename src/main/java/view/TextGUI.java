@@ -14,8 +14,13 @@ public class TextGUI implements GUI {
         int[][] board = state.getBoard();
         for(int[] row : board){
             StringBuilder stringBuilder = new StringBuilder();
-            for(int value : row)
-                 stringBuilder.append(value).append(" ");
+            for(int value : row){
+                if (value == -1)
+                    stringBuilder.append(0).append("\t");
+                else
+                    stringBuilder.append(value).append("\t");
+
+            }
             System.out.println(stringBuilder.toString());
         }
     }
