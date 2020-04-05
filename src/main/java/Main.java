@@ -1,10 +1,10 @@
 import controller.AI;
-import controller.nn.Pseudo;
+import controller.nn.Alphabeta;
+import controller.nn.Minimax;
 import model.heuristic.ScoreHeuristic;
 import model.State;
 import model.action.Action;
 import util.Utils;
-import view.GUI;
 import view.TextGUI;
 
 import java.util.Arrays;
@@ -13,10 +13,13 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
         TextGUI textGUI = new TextGUI();
         int score = 0;
-        for (int i = 0; i < 1000; i++) {
+        int iterations = 100;
+        int sum = 0;
+        for (int i = 1; i <= iterations; i++) {
             int[][] board = setupBoard();
             State state = new State(board);
-            AI ai = new Pseudo();
+            AI ai = new Alphabeta();
+            int value = 0;
             while(!state.getActions().isEmpty()) {
                 Action action = ai.getAction(state);
                 /*
@@ -24,16 +27,20 @@ public class Main {
                 textGUI.show(state);
                 System.out.println(action);
 
+
                  */
-                int value = new ScoreHeuristic().getValue(state);
+                value = new ScoreHeuristic().getValue(state);
                 if(value > score)
                     score = value;
+
 
                 state = action.getResult(state);
                 Utils.spawn(state);
             }
+            sum += value;
+            System.out.println(String.format("%d\t=\t%d", i, value));
         }
-        System.out.println(score);
+        System.out.println(String.format("max = %d\naverage = %d", score, sum/iterations));
     }
 
     public static int[][] setupBoard(){
