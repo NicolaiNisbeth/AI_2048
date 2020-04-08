@@ -11,6 +11,7 @@ public class TextGUI implements GUI {
 
     @Override
     public void show(State state) {
+        if(state == null) return;
         int[][] board = state.getBoard();
         for(int[] row : board){
             StringBuilder stringBuilder = new StringBuilder();

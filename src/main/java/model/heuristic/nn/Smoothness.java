@@ -5,7 +5,7 @@ import model.heuristic.Heuristic;
 
 public class Smoothness implements Heuristic {
     @Override
-    public int getValue(State state) {
+    public double getValue(State state) {
         int[][] board = state.getBoard();
         int monotonicityLeft = 0;
         int monotonicityRight = 0;

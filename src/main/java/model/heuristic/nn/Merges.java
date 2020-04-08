@@ -5,7 +5,7 @@ import model.heuristic.Heuristic;
 
 public class Merges implements Heuristic {
     @Override
-    public int getValue(State state) {
+    public double getValue(State state) {
         int merges = 0;
         int[][] board = state.getBoard();
         for (int i = 0; i < board.length; i++){

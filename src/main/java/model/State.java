@@ -45,13 +45,13 @@ public class State {
         // Enjoy :)
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
-                if(j > 0 && (board[i][j] != -1 && board[i][j-1] == -1))
+                if(j > 0 && (board[i][j] != -1 && (board[i][j-1] == -1 || board[i][j-1] == board[i][j])))
                     directions[LEFT] = true;
-                if(j < board[i].length-1 && (board[i][j] != -1 && board[i][j+1] == -1))
+                if(j < board[i].length-1 && (board[i][j] != -1 && (board[i][j+1] == -1 || board[i][j+1] == board[i][j])))
                     directions[RIGHT] = true;
-                if(i > 0 && (board[i][j] != -1 && board[i-1][j] == -1))
+                if(i > 0 && (board[i][j] != -1 && (board[i-1][j] == -1 || board[i-1][j] == board[i][j])))
                     directions[UP] = true;
-                if(i < board.length-1 && (board[i][j] != -1 && board[i+1][j] == -1))
+                if(i < board.length-1 && (board[i][j] != -1 && (board[i+1][j] == -1 || board[i+1][j] == board[i][j])))
                     directions[DOWN] = true;
             }
         }

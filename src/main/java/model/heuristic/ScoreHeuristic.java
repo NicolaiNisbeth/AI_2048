@@ -4,7 +4,7 @@ import model.State;
 
 public class ScoreHeuristic implements Heuristic {
     @Override
-    public int getValue(State state) {
+    public double getValue(State state) {
         int[][] board = state.getBoard();
         int sum = 0;
         for(int[] row : board)

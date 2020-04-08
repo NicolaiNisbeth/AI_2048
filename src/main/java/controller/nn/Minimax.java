@@ -17,12 +17,12 @@ public class Minimax implements AI {
 
     @Override
     public Action getAction(State state) {
-        int maxValue = Integer.MIN_VALUE;
+        double maxValue = Integer.MIN_VALUE;
         Action maxAction = null;
 
         for (Action action : state.getActions()){
             State child = action.getResult(state);
-            int value = minimax(child);
+            double value = minimax(child);
 
             if(value > maxValue){
                 maxValue = value;
@@ -38,7 +38,7 @@ public class Minimax implements AI {
      * @param parent
      * @return
      */
-    private int minimax(State parent) {
+    private double minimax(State parent) {
         int alpha = Integer.MIN_VALUE;  // lower bound on what MAX can achieve
         int beta = Integer.MAX_VALUE;   // upper bound on what MIN can achieve
         int depthLimit = 2;
@@ -53,12 +53,12 @@ public class Minimax implements AI {
      * @param depth
      * @return
      */
-    private int maximizer(State parent, int alpha, int beta, int depth) {
+    private double maximizer(State parent, double alpha, double beta, int depth) {
         // evaluate board at leaf node or when depth limit is reached
         if (parent.getActions().isEmpty() || depth == 0)
             return new NnHeauristic().getValue(parent);
 
-        int value = Integer.MIN_VALUE;
+        double value = Double.MIN_VALUE;
         for (Action action : parent.getActions()){
             State child = action.getResult(parent);
             value = Math.max(value, minimizer(child, alpha, beta, depth-1));
@@ -81,7 +81,7 @@ public class Minimax implements AI {
      * @param depthLimit
      * @return
      */
-    private int minimizer(State parent, int alpha, int beta, int depthLimit) {
+    private double minimizer(State parent, double alpha, double beta, int depthLimit) {
         // evaluate board at leaf node or depth limit is reached
         if (parent.getActions().isEmpty() || depthLimit == 0)
             return new NnHeauristic().getValue(parent);
@@ -97,7 +97,7 @@ public class Minimax implements AI {
             spawn(temp, coordinates, -1);
         }
 
-        int value = Integer.MAX_VALUE;
+        double value = Double.MAX_VALUE;
         for (State child : children){
             value = Math.min(value, maximizer(child, alpha, beta, depthLimit-1));
             // alpha-cut

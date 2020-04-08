@@ -2,12 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcdb36c5-c2d9-4010-823a-a03b3ba84944" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/jd/ExpectiMax.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/heuristic/Denmark.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/heuristic/youmadethis/SmallExponentGrid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/heuristic/youmadethis/SmallSnake.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/heuristic/youmadethis/SnakeHeuristic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/action/DownSwipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/action/DownSwipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/action/LeftSwipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/action/LeftSwipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/action/RightSwipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/action/RightSwipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/action/UpSwipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/action/UpSwipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/nn/Alphabeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/nn/Alphabeta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/nn/Minimax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/nn/Minimax.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/Heuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/heuristic/Heuristic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/ScoreHeuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/heuristic/ScoreHeuristic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/nn/EmptySquares.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/heuristic/nn/EmptySquares.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/nn/LocationOfHighValueBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/heuristic/nn/LocationOfHighValueBlocks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/nn/Merges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/heuristic/nn/Merges.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/nn/NnHeauristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/heuristic/nn/NnHeauristic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/nn/Smoothness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/heuristic/nn/Smoothness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/TextGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/TextGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +39,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="jdai" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -116,6 +130,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -127,6 +153,7 @@
       <option name="presentableId" value="Default" />
       <updated>1583826593671</updated>
       <workItem from="1583826596305" duration="26522000" />
+      <workItem from="1586335256958" duration="7582000" />
     </task>
     <task id="LOCAL-00001" summary="Checking action legality">
       <created>1583829205007</created>
@@ -349,9 +376,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Left Right working" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="803" y="266" width="374" height="582" key="#com.intellij.ide.util.MemberChooser" timestamp="1583852324674">
-      <screen x="70" y="27" width="1850" height="1053" />
+    <state x="761" y="236" width="374" height="582" key="#com.intellij.ide.util.MemberChooser" timestamp="1586342174063">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="761" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586342174063" />
     <state x="803" y="266" width="374" height="582" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1583852324674" />
     <state x="616" y="481" width="783" height="152" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1583850608836">
       <screen x="70" y="27" width="1850" height="1053" />
@@ -369,37 +397,45 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1583853031543" />
-    <state width="1804" height="319" key="GridCell.Tab.0.bottom" timestamp="1583856138386">
-      <screen x="70" y="27" width="1850" height="1053" />
+    <state width="1877" height="387" key="GridCell.Tab.0.bottom" timestamp="1586342807756">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="387" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586342807756" />
     <state width="1804" height="319" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1583856138386" />
-    <state width="1804" height="319" key="GridCell.Tab.0.center" timestamp="1583856138386">
-      <screen x="70" y="27" width="1850" height="1053" />
+    <state width="1877" height="387" key="GridCell.Tab.0.center" timestamp="1586342807756">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="387" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586342807756" />
     <state width="1804" height="319" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1583856138386" />
-    <state width="1804" height="319" key="GridCell.Tab.0.left" timestamp="1583856138386">
-      <screen x="70" y="27" width="1850" height="1053" />
+    <state width="1877" height="387" key="GridCell.Tab.0.left" timestamp="1586342807756">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="387" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586342807756" />
     <state width="1804" height="319" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1583856138386" />
-    <state width="1804" height="319" key="GridCell.Tab.0.right" timestamp="1583856138386">
-      <screen x="70" y="27" width="1850" height="1053" />
+    <state width="1877" height="387" key="GridCell.Tab.0.right" timestamp="1586342807756">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="387" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586342807756" />
     <state width="1804" height="319" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1583856138386" />
-    <state width="1804" height="330" key="GridCell.Tab.1.bottom" timestamp="1583840292990">
-      <screen x="70" y="27" width="1850" height="1053" />
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1586341897435">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586341897435" />
     <state width="1804" height="330" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1583840292990" />
-    <state width="1804" height="330" key="GridCell.Tab.1.center" timestamp="1583840292990">
-      <screen x="70" y="27" width="1850" height="1053" />
+    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1586341897434">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586341897434" />
     <state width="1804" height="330" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1583840292990" />
-    <state width="1804" height="330" key="GridCell.Tab.1.left" timestamp="1583840292989">
-      <screen x="70" y="27" width="1850" height="1053" />
+    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1586341897434">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586341897434" />
     <state width="1804" height="330" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1583840292989" />
-    <state width="1804" height="330" key="GridCell.Tab.1.right" timestamp="1583840292990">
-      <screen x="70" y="27" width="1850" height="1053" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1586341897434">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586341897434" />
     <state width="1804" height="330" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1583840292990" />
     <state x="700" y="271" width="580" height="571" key="MultipleFileMergeDialog" timestamp="1583845759628">
       <screen x="70" y="27" width="1850" height="1053" />
@@ -417,9 +453,30 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="763" y="473" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/70.27.1850.1053@70.27.1850.1053" timestamp="1583855923933" />
+    <state x="702" y="141" key="refactoring.ChangeSignatureDialog" timestamp="1586337254943">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="702" y="141" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586337254943" />
     <state x="658" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1583838670697">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="658" y="259" width="672" height="678" key="search.everywhere.popup/70.27.1850.1053@70.27.1850.1053" timestamp="1583838670697" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/model/heuristic/youmadethis/SmallExponentGrid.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="action == null" language="JAVA" />
+          <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

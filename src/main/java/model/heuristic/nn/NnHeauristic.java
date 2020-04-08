@@ -5,7 +5,7 @@ import model.heuristic.Heuristic;
 
 public class NnHeauristic implements Heuristic {
     @Override
-    public int getValue(State state) {
+    public double getValue(State state) {
 
         Heuristic locationOfHighValueBlocks = new LocationOfHighValueBlocks();
         Heuristic numOfMerges = new Merges();

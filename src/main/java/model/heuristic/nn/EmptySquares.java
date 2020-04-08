@@ -6,7 +6,7 @@ import util.Utils;
 
 public class EmptySquares implements Heuristic {
     @Override
-    public int getValue(State state) {
+    public double getValue(State state) {
         //int maxEmptySquares = 16;
         return Utils.getEmptySquares(state).size();
     }

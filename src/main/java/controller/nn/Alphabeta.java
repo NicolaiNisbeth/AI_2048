@@ -15,15 +15,22 @@ import static util.Utils.spawn;
 
 public class Alphabeta implements AI {
 
+    private int depthLimit;
+    private Heuristic heuristic;
+
+    public Alphabeta(int depth){
+        this.depthLimit = depth;
+    }
+
     @Override
     public Action getAction(State state) {
-        int maxValue = Integer.MIN_VALUE;
+        double maxValue = Integer.MIN_VALUE;
         Action maxAction = null;
 
         for (Action action : state.getActions()){
             State child = action.getResult(state);
-            int value = alphabeta(child, 2, Integer.MIN_VALUE, Integer.MAX_VALUE, true);
-
+            double value = alphabeta(child, depthLimit, Integer.MIN_VALUE, Integer.MAX_VALUE, false);
+            //System.out.println(value + " " + action);
             if(value > maxValue){
                 maxValue = value;
                 maxAction = action;
@@ -33,12 +40,12 @@ public class Alphabeta implements AI {
         return maxAction;
     }
 
-    private int alphabeta(State parent, int depth, int alpha, int beta, boolean maximizer) {
+    private double alphabeta(State parent, int depth, double alpha, double beta, boolean maximizer) {
         if (depth == 0 || parent.getActions().isEmpty())
-            return new NnHeauristic().getValue(parent);
+            return heuristic.getValue(parent);
 
         if (maximizer){
-            int value = Integer.MIN_VALUE;
+            double value = Integer.MIN_VALUE;
             for (Action action : parent.getActions()){
                 State child = action.getResult(parent);
                 value = Math.max(value, alphabeta(child, depth-1, alpha, beta, false));
@@ -59,7 +66,7 @@ public class Alphabeta implements AI {
                 spawn(temp, coordinates, -1);
             }
 
-            int value = Integer.MAX_VALUE;
+            double value = Integer.MAX_VALUE;
             for (State child : children){
                 value = Math.min(value, alphabeta(child, depth-1, alpha, beta, true));
                 beta = Math.min(beta, value);
@@ -72,6 +79,6 @@ public class Alphabeta implements AI {
 
     @Override
     public void setHeuristics(Heuristic heuristic) {
-
+        this.heuristic = heuristic;
     }
 }

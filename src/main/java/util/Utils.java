@@ -1,7 +1,10 @@
 package util;
 
+import model.Result;
 import model.State;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Utils {
     public static int[][] copyBoard(State state){
@@ -40,5 +43,21 @@ public class Utils {
 
     public static void spawn(State state, Pair<Integer, Integer> coordinates, int val){
         state.getBoard()[coordinates.getFirst()][coordinates.getSecond()] = val;
+    }
+
+    public static Set<Result> getPossibleSpawns(State state){
+        Set<Result> spawns = new HashSet<>();
+        ArrayList<Pair<Integer, Integer>> coordinates = getEmptySquares(state);
+        for(Pair<Integer, Integer> coordinate : coordinates){
+            int[][] board2 = copyBoard(state);
+            int[][] board4 = copyBoard(state);
+            State state2 = new State(board2);
+            State state4 = new State(board4);
+            spawn(state2, coordinate, 2);
+            spawn(state4, coordinate, 4);
+            spawns.add(new Result(state2, 0.9));
+            spawns.add(new Result(state4, 0.1));
+        }
+        return spawns;
     }
 }
