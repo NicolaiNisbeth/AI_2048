@@ -11,7 +11,7 @@ public class Smoothness implements Heuristic {
         int vertical = 0;
         for (int i = 0; i < board.length; i++){
             for (int j = 1; j < board.length; j++){
-                if (board[i][j-1] == -1) continue;
+                if (board[i][j] == -1) continue;
                 if (board[i][j-1] > board[i][j]){
                     horizontal += board[i][j-1] - board[i][j];
                 }
