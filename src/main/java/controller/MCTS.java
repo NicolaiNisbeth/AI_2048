@@ -16,6 +16,11 @@ public class MCTS implements AI {
 
     private Heuristic heuristic;
     private Node root;
+    private int iterations;
+
+    public MCTS(int iterations){
+        this.iterations = iterations;
+    }
 
     public static class Node {
         State state;
@@ -36,22 +41,24 @@ public class MCTS implements AI {
     public Action getAction(State state) {
         root = new Node(state, null);
 
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < iterations; i++) {
             Node node = selectFrom(root);
             expansion(node);
         }
 
-        Action maxAction = null;
+        Node maxNode = null;
         int maxVisited = Integer.MIN_VALUE;
         for (Node child : root.children){
             int visited = child.visited;
             if (visited > maxVisited){
                 maxVisited = visited;
-                maxAction = child.action;
+                maxNode = child;
             }
         }
+        if(maxNode == null) return null;
 
-        return maxAction;
+        System.out.println("Evaluation: " + heuristic.getValue(maxNode.state));
+        return maxNode.action;
     }
 
     private void expansion(Node node) {

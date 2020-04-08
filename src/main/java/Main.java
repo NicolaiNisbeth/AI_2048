@@ -7,6 +7,7 @@ import model.heuristic.HighestNumber;
 import model.heuristic.ScoreHeuristic;
 import model.State;
 import model.action.Action;
+import model.heuristic.WinLoss;
 import model.heuristic.nn.EmptySquares;
 import model.heuristic.youmadethis.SmallExponentGrid;
 import model.heuristic.youmadethis.SmallSnake;
@@ -24,8 +25,8 @@ public class Main {
         for (int i = 1; i <= iterations; i++) {
             int[][] board = setupBoard();
             State state = new State(board);
-            AI ai = new MCTS();
-            ai.setHeuristics(new HighestNumber());
+            AI ai = new MCTS(1000);
+            ai.setHeuristics(new Denmark());
             double value = 0;
             while(!state.getActions().isEmpty()) {
 
