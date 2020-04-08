@@ -35,9 +35,6 @@ public class Main {
                 System.out.println(action);
                 //Thread.sleep(1500);
 
-
-
-
                 value = new ScoreHeuristic().getValue(state);
                 if(value > score)
                     score = value;

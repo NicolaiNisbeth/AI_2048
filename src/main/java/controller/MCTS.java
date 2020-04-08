@@ -39,6 +39,7 @@ public class MCTS implements AI {
 
     @Override
     public Action getAction(State state) {
+        root = findRoot(state);
         root = new Node(state, null);
 
         for (int i = 0; i < iterations; i++) {
@@ -59,6 +60,16 @@ public class MCTS implements AI {
 
         System.out.println("Evaluation: " + heuristic.getValue(maxNode.state));
         return maxNode.action;
+    }
+
+    private Node findRoot(State state) {
+        if (root == null)
+            return new Node(state, null);
+
+        for (Node child : root.children) if (child.state.equals(state))
+                return child;
+
+        throw new IllegalStateException("Root not found");
     }
 
     private void expansion(Node node) {
