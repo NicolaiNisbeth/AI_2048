@@ -22,14 +22,14 @@ public class Main {
         for (int i = 1; i <= iterations; i++) {
             int[][] board = setupBoard();
             State state = new State(board);
-            AI ai = new Alphabeta(4);
+            AI ai = new ExpectiMax(4);
             ai.setHeuristics(new Denmark());
             double value = 0;
             while(!state.getActions().isEmpty()) {
 
-                //textGUI.show(state);
+                textGUI.show(state);
                 Action action = ai.getAction(state);
-                //System.out.println(action);
+                System.out.println(action);
                 //Thread.sleep(1500);
 
 

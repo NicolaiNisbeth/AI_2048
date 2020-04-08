@@ -26,7 +26,7 @@ public class ExpectiMax implements AI {
         Action maxAction = null;
         for(Action action : actions){
             double value = getValue(action, state, 1);
-            //System.out.println(value + " " + action);
+            System.out.println(value + " " + action);
             if(value >= max){
                 max = value;
                 maxAction = action;
