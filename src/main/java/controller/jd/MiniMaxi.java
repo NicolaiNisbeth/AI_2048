@@ -10,12 +10,12 @@ import util.Utils;
 import java.util.List;
 import java.util.Set;
 
-public class ExpectiMax implements AI {
+public class MiniMaxi implements AI {
 
     private int maxDepth;
     private Heuristic heuristic;
 
-    public ExpectiMax(int depth){
+    public MiniMaxi(int depth){
         this.maxDepth = depth;
     }
 
@@ -26,7 +26,7 @@ public class ExpectiMax implements AI {
         Action maxAction = null;
         for(Action action : actions){
             double value = getValue(action, state, 1);
-            //System.out.println(value + " " + action);
+            System.out.println(value + " " + action);
             if(value >= max){
                 max = value;
                 maxAction = action;
@@ -38,14 +38,16 @@ public class ExpectiMax implements AI {
     private double getValue(Action action, State parent, int depth) {
         State state = action.getResult(parent);
         Set<Result> results = Utils.getPossibleSpawns(state);
-        double sum = 0;
+        double min = Integer.MAX_VALUE;
         for(Result result : results){
             State resultState = result.getState();
             double probability = result.getProbability();
             double resultValue = probability * getValue(resultState, depth);
-            sum += resultValue;
+            if(resultValue < min){
+                min = resultValue;
+            }
         }
-        return 2 * sum / results.size();
+        return min;
     }
 
     private double getValue(State state, int depth){

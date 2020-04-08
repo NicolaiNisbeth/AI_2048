@@ -1,13 +1,21 @@
 import controller.AI;
 import controller.MCTS;
+import controller.jd.ExpectiMax;
+import controller.jd.MiniMaxi;
 import controller.nn.Alphabeta;
+import controller.nn.Minimax;
 import model.heuristic.Corners;
 import model.heuristic.Heuristic;
 import model.heuristic.HighestNumber;
 import model.heuristic.ScoreHeuristic;
 import model.State;
 import model.action.Action;
+import model.heuristic.nn.Cocktail;
 import model.heuristic.nn.EmptySquares;
+import model.heuristic.nn.Smoothness;
+import model.heuristic.youmadethis.SmallExponentGrid;
+import model.heuristic.youmadethis.SmallSnake;
+import model.heuristic.youmadethis.SnakeHeuristic;
 import util.Utils;
 import view.TextGUI;
 
@@ -23,15 +31,16 @@ public class Main {
         for (int i = 1; i <= iterations; i++) {
             int[][] board = setupBoard();
             State state = new State(board);
-            AI ai = new MCTS(1000);
-            ai.setHeuristics(outcome -> new HighestNumber().getValue(outcome) + new ScoreHeuristic().getValue(outcome));
+            AI ai = new ExpectiMax(2);
+            ai.setHeuristics(outcome ->
+                new Cocktail().getValue(outcome)
+            );
             double value = 0;
             while(!state.getActions().isEmpty()) {
 
-                textGUI.show(state);
+                //textGUI.show(state);
                 Action action = ai.getAction(state);
-                System.out.println(action);
-                //Thread.sleep(1500);
+                //System.out.println(action);
 
                 value = new ScoreHeuristic().getValue(state);
                 if(value > score)

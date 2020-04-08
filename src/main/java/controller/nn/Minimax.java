@@ -14,6 +14,12 @@ import static util.Utils.*;
 
 public class Minimax implements AI {
 
+    private int depthLimit;
+
+    public Minimax(int depth){
+        this.depthLimit = depth;
+    }
+
 
     @Override
     public Action getAction(State state) {
@@ -41,7 +47,6 @@ public class Minimax implements AI {
     private double minimax(State parent) {
         int alpha = Integer.MIN_VALUE;  // lower bound on what MAX can achieve
         int beta = Integer.MAX_VALUE;   // upper bound on what MIN can achieve
-        int depthLimit = 2;
         return maximizer(parent, alpha, beta, depthLimit);
     }
 
