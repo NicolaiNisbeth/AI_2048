@@ -1,16 +1,12 @@
 import controller.AI;
 import controller.MCTS;
-import controller.jd.ExpectiMax;
-import controller.nn.Alphabeta;
-import model.heuristic.Denmark;
+import model.heuristic.Corners;
+import model.heuristic.Heuristic;
 import model.heuristic.HighestNumber;
 import model.heuristic.ScoreHeuristic;
 import model.State;
 import model.action.Action;
-import model.heuristic.WinLoss;
 import model.heuristic.nn.EmptySquares;
-import model.heuristic.youmadethis.SmallExponentGrid;
-import model.heuristic.youmadethis.SmallSnake;
 import util.Utils;
 import view.TextGUI;
 
@@ -26,7 +22,7 @@ public class Main {
             int[][] board = setupBoard();
             State state = new State(board);
             AI ai = new MCTS(1000);
-            ai.setHeuristics(new Denmark());
+            ai.setHeuristics(new ScoreHeuristic());
             double value = 0;
             while(!state.getActions().isEmpty()) {
 

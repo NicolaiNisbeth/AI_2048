@@ -4,6 +4,7 @@ import javafx.scene.transform.Shear;
 import model.State;
 import model.action.Action;
 import model.heuristic.Heuristic;
+import model.heuristic.HighestNumber;
 import util.Utils;
 
 import java.util.ArrayList;
@@ -40,7 +41,6 @@ public class MCTS implements AI {
     @Override
     public Action getAction(State state) {
         root = findRoot(state);
-        root = new Node(state, null);
 
         for (int i = 0; i < iterations; i++) {
             Node node = selectFrom(root);
@@ -58,7 +58,7 @@ public class MCTS implements AI {
         }
         if(maxNode == null) return null;
 
-        System.out.println("Evaluation: " + heuristic.getValue(maxNode.state));
+        System.out.println("Evaluation: " + maxNode.score / maxNode.visited);
         return maxNode.action;
     }
 

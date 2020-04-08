@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcdb36c5-c2d9-4010-823a-a03b3ba84944" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/heuristic/WinLoss.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/heuristic/CenterBad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/heuristic/Corners.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/MCTS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MCTS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/Denmark.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +139,7 @@
       <option name="presentableId" value="Default" />
       <updated>1583826593671</updated>
       <workItem from="1583826596305" duration="26522000" />
-      <workItem from="1586335256958" duration="13527000" />
+      <workItem from="1586335256958" duration="16743000" />
     </task>
     <task id="LOCAL-00001" summary="Checking action legality">
       <created>1583829205007</created>
@@ -342,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586350519979</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Eval">
+      <created>1586353079295</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1586353079295</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,13 +382,14 @@
     <MESSAGE value="Left Right working" />
     <MESSAGE value="Two steps forward..." />
     <MESSAGE value="Heuristic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Heuristic" />
+    <MESSAGE value="Eval" />
+    <option name="LAST_COMMIT_MESSAGE" value="Eval" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="761" y="236" width="374" height="582" key="#com.intellij.ide.util.MemberChooser" timestamp="1586352574647">
+    <state x="761" y="236" width="374" height="582" key="#com.intellij.ide.util.MemberChooser" timestamp="1586354618874">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="761" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586352574647" />
+    <state x="761" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586354618874" />
     <state x="803" y="266" width="374" height="582" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1583852324674" />
     <state x="616" y="481" width="783" height="152" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1583850608836">
       <screen x="70" y="27" width="1850" height="1053" />
@@ -393,30 +403,30 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="747" y="161" width="476" height="799" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1583850361369" />
-    <state x="505" y="69" width="865" height="919" key="CommitChangelistDialog2" timestamp="1586350518056">
+    <state x="505" y="69" width="865" height="919" key="CommitChangelistDialog2" timestamp="1586353077372">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="505" y="69" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586350518056" />
+    <state x="505" y="69" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586353077372" />
     <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1583853031543" />
-    <state width="1877" height="357" key="GridCell.Tab.0.bottom" timestamp="1586352831753">
+    <state width="1877" height="357" key="GridCell.Tab.0.bottom" timestamp="1586355677426">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="357" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586352831753" />
+    <state width="1877" height="357" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586355677426" />
     <state width="1804" height="319" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1583856138386" />
-    <state width="1877" height="357" key="GridCell.Tab.0.center" timestamp="1586352831753">
+    <state width="1877" height="357" key="GridCell.Tab.0.center" timestamp="1586355677426">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="357" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586352831753" />
+    <state width="1877" height="357" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586355677426" />
     <state width="1804" height="319" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1583856138386" />
-    <state width="1877" height="357" key="GridCell.Tab.0.left" timestamp="1586352831753">
+    <state width="1877" height="357" key="GridCell.Tab.0.left" timestamp="1586355677425">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="357" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586352831753" />
+    <state width="1877" height="357" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586355677425" />
     <state width="1804" height="319" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1583856138386" />
-    <state width="1877" height="357" key="GridCell.Tab.0.right" timestamp="1586352831753">
+    <state width="1877" height="357" key="GridCell.Tab.0.right" timestamp="1586355677426">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="357" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586352831753" />
+    <state width="1877" height="357" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586355677426" />
     <state width="1804" height="319" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1583856138386" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1586341897435">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -442,19 +452,23 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="700" y="271" width="580" height="571" key="MultipleFileMergeDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1583845759628" />
-    <state x="540" y="259" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1586352010062">
+    <state x="747" y="237" key="VCS.ChangeListViewerDialog" timestamp="1586353919586">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="540" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586352010062" />
+    <state x="747" y="237" key="VCS.ChangeListViewerDialog/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586353919586" />
+    <state x="540" y="259" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1586353080644">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586353080644" />
     <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1583853032829" />
     <state x="648" y="150" width="683" height="813" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583840271453">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="648" y="150" width="683" height="813" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1583840271453" />
-    <state x="719" y="440" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586352459601">
+    <state x="719" y="440" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586355649388">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="719" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586352459601" />
+    <state x="719" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586355649388" />
     <state x="763" y="473" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/70.27.1850.1053@70.27.1850.1053" timestamp="1583855923933" />
     <state x="702" y="141" key="refactoring.ChangeSignatureDialog" timestamp="1586337254943">
       <screen x="0" y="0" width="1920" height="1040" />
