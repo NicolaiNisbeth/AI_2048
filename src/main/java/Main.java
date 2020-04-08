@@ -1,5 +1,6 @@
 import controller.AI;
 import controller.MCTS;
+import controller.nn.Alphabeta;
 import model.heuristic.Corners;
 import model.heuristic.Heuristic;
 import model.heuristic.HighestNumber;
@@ -10,19 +11,20 @@ import model.heuristic.nn.EmptySquares;
 import util.Utils;
 import view.TextGUI;
 
+import javax.swing.*;
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         TextGUI textGUI = new TextGUI();
         double score = 0;
-        int iterations = 100;
+        int iterations = 10;
         double sum = 0;
         for (int i = 1; i <= iterations; i++) {
             int[][] board = setupBoard();
             State state = new State(board);
-            AI ai = new MCTS(300);
-            ai.setHeuristics(new ScoreHeuristic());
+            AI ai = new MCTS(1000);
+            ai.setHeuristics(outcome -> new HighestNumber().getValue(outcome) + new ScoreHeuristic().getValue(outcome));
             double value = 0;
             while(!state.getActions().isEmpty()) {
 

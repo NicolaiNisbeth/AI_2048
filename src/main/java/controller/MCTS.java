@@ -7,6 +7,8 @@ import model.heuristic.Heuristic;
 import model.heuristic.HighestNumber;
 import util.Utils;
 
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -69,8 +71,10 @@ public class MCTS implements AI {
             return new Node(state, null);
 
         for (Node child : root.children)
-            for(Node grandchild : child.children) if (grandchild.state.equals(state))
+            for(Node grandchild : child.children) if (grandchild.state.equals(state)){
+                grandchild.parent = null;
                 return grandchild;
+            }
 
         throw new IllegalStateException("Root not found");
     }
@@ -120,8 +124,8 @@ public class MCTS implements AI {
         if (node.children.isEmpty())
             return node;
 
-        double maxValue = MIN_VALUE, minValue = MAX_VALUE;
-        Node maxNode = null, minNode = null;
+        double maxValue = MIN_VALUE;
+        Node maxNode = null;
 
         for (Node child : node.children){
             double value = getValue(child);
@@ -129,15 +133,11 @@ public class MCTS implements AI {
                 maxValue = value;
                 maxNode = child;
             }
-            if(value < minValue){
-                minValue = value;
-                minNode = child;
-            }
         }
 
-        if (maxNode == null || minNode == null) throw new IllegalStateException();
+        if (maxNode == null) throw new IllegalStateException();
 
-        return node.white ? selectFrom(maxNode) : selectFrom(minNode);
+        return selectFrom(maxNode);
     }
 
     private double getValue(Node node) {
