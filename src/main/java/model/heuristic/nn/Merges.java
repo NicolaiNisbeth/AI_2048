@@ -3,7 +3,7 @@ package model.heuristic.nn;
 import model.State;
 import model.heuristic.Heuristic;
 
-public class NearnessOfSimilarBlocks implements Heuristic {
+public class Merges implements Heuristic {
     @Override
     public int getValue(State state) {
         int merges = 0;

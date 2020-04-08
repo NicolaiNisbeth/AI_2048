@@ -9,7 +9,7 @@ public class LocationOfHighValueBlocks implements Heuristic {
         int[][] board = state.getBoard();
         int sum = 0;
 
-        int[][] weights = getWeightMatrix();
+        int[][] weights = getSnakeMatrix();
         for (int i = 0; i < board.length; i++){
             for (int j = 0; j < board.length; j++){
                 if (board[i][j] != -1)
