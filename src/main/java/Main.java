@@ -21,7 +21,7 @@ public class Main {
         for (int i = 1; i <= iterations; i++) {
             int[][] board = setupBoard();
             State state = new State(board);
-            AI ai = new MCTS(1000);
+            AI ai = new MCTS(300);
             ai.setHeuristics(new ScoreHeuristic());
             double value = 0;
             while(!state.getActions().isEmpty()) {
