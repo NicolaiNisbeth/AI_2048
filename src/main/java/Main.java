@@ -1,7 +1,9 @@
 import controller.AI;
+import controller.MCTS;
 import controller.jd.ExpectiMax;
 import controller.nn.Alphabeta;
 import model.heuristic.Denmark;
+import model.heuristic.HighestNumber;
 import model.heuristic.ScoreHeuristic;
 import model.State;
 import model.action.Action;
@@ -22,8 +24,8 @@ public class Main {
         for (int i = 1; i <= iterations; i++) {
             int[][] board = setupBoard();
             State state = new State(board);
-            AI ai = new ExpectiMax(4);
-            ai.setHeuristics(new Denmark());
+            AI ai = new MCTS();
+            ai.setHeuristics(new HighestNumber());
             double value = 0;
             while(!state.getActions().isEmpty()) {
 

@@ -7,6 +7,7 @@ import util.Utils;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class State {
@@ -72,4 +73,16 @@ public class State {
     }
 
 
+    public Action getRandomAction() {
+        Set<Action> actions = getActions();
+
+        if (actions.size() == 0) return null;
+
+        int random = (int)(Math.random() * actions.size());
+        Iterator<Action> iterator = actions.iterator();
+        for (int i = 0; i < random; i++) {
+            iterator.next();
+        }
+        return iterator.next();
+    }
 }
