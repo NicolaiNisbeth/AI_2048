@@ -28,7 +28,7 @@ public class Main {
 
         Grafic_UI GUI = new Grafic_UI();
         double score = 0;
-        int iterations = 1;
+        int iterations = 4;
         double sum = 0;
         for (int i = 1; i <= iterations; i++) {
             int[][] board = setupBoard();
@@ -51,6 +51,13 @@ public class Main {
 
                 state = action.getResult(state);
                 Utils.spawn(state);
+            }
+            if(new HighestNumber().getValue(state) >= 2048){
+                GUI.win();
+            }
+            else{
+                GUI.lose();
+                break;
             }
             sum += value;
             System.out.println(String.format("%d\t=\t%f", i, value));

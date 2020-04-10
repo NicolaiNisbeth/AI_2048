@@ -18,9 +18,9 @@ public class Grafic_UI extends JFrame implements GUI  {
 
     private static final String TITLE = "2048 in Java";
 
-    public static final String WIN_MSG = "You already win, but you can continue";
+    public static final String WIN_MSG = "Ai won... AI iz happy";
 
-    public static final String LOSE_MSG = "You lose, press 'r' to try again!";
+    public static final String LOSE_MSG = "This makes me a saaaaad AI";
 
     State startstate = new State(new int[4][4]);
     public Grafic_UI(){
