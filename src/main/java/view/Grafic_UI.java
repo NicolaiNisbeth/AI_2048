@@ -1,5 +1,7 @@
 package view;
-
+/* most code is taken from https://github.com/Alwayswithme/2048.java/blob/master/src/phx/Board.java
+ * 10/4 2020
+ * */
 import model.State;
 import model.action.Action;
 import view.GUIs.Board;
