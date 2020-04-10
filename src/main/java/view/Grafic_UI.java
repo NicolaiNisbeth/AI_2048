@@ -8,8 +8,16 @@ import view.GUIs.Board;
 import view.GUIs.Tile;
 import view.GUIs.Value;
 
+import javax.sound.sampled.*;
+import javax.print.attribute.standard.Media;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+
 
 public class Grafic_UI extends JFrame implements GUI  {
     Grafic_UI game;
@@ -73,14 +81,29 @@ public class Grafic_UI extends JFrame implements GUI  {
                 if(state.getBoard()[i][j] == -1){
                     tiles[j+i*4] = new Tile(Value._0);
                 }
-                else{
-                    tiles[j+i*4] = new Tile(Value.of(state.getBoard()[i][j]));
-                }
-                if(tiles[j+i*4] == null){
-                    System.out.println("nooooo");
+                else {
+                    tiles[j + i * 4] = new Tile(Value.of(state.getBoard()[i][j]));
                 }
             }
         }
+
+
         return tiles;
+    }
+    public static void playSound(String file){
+        AudioInputStream audioIn = null;
+        try {
+            audioIn = AudioSystem.getAudioInputStream(Grafic_UI.class.getResource(file));
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioIn);
+            clip.start();
+        } catch (UnsupportedAudioFileException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (LineUnavailableException e) {
+            e.printStackTrace();
+        }
+
     }
 }

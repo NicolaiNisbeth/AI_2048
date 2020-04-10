@@ -1,26 +1,15 @@
 import controller.AI;
-import controller.MCTS;
 import controller.jd.ExpectiMax;
-import controller.jd.MiniMaxi;
-import controller.nn.Alphabeta;
-import controller.nn.Minimax;
-import model.heuristic.Corners;
-import model.heuristic.Heuristic;
 import model.heuristic.HighestNumber;
 import model.heuristic.ScoreHeuristic;
 import model.State;
 import model.action.Action;
 import model.heuristic.nn.Cocktail;
-import model.heuristic.nn.EmptySquares;
-import model.heuristic.nn.Smoothness;
-import model.heuristic.youmadethis.SmallExponentGrid;
-import model.heuristic.youmadethis.SmallSnake;
-import model.heuristic.youmadethis.SnakeHeuristic;
+
 import util.Utils;
 import view.Grafic_UI;
-import view.TextGUI;
 
-import javax.swing.*;
+import java.io.File;
 import java.util.Arrays;
 
 public class Main {
@@ -54,9 +43,11 @@ public class Main {
             }
             if(new HighestNumber().getValue(state) >= 2048){
                 GUI.win();
+                Grafic_UI.playSound("/win.wav");
             }
             else{
                 GUI.lose();
+                Grafic_UI.playSound("/loss.wav");
                 break;
             }
             sum += value;
