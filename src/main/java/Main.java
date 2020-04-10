@@ -1,20 +1,22 @@
 import controller.AI;
 import controller.MCTS;
-import model.heuristic.Corners;
-import model.heuristic.Heuristic;
-import model.heuristic.HighestNumber;
 import model.heuristic.ScoreHeuristic;
 import model.State;
 import model.action.Action;
-import model.heuristic.nn.EmptySquares;
 import util.Utils;
+import view.GUIs.Board;
+import view.GUIs.Value;
+import view.Grafic_UI;
 import view.TextGUI;
 
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        TextGUI textGUI = new TextGUI();
+
+
+       // TextGUI textGUI = new TextGUI();
+        Grafic_UI GUI = new Grafic_UI();
         double score = 0;
         int iterations = 100;
         double sum = 0;
@@ -26,7 +28,7 @@ public class Main {
             double value = 0;
             while(!state.getActions().isEmpty()) {
 
-                textGUI.show(state);
+                GUI.show(state);
                 Action action = ai.getAction(state);
                 System.out.println(action);
                 //Thread.sleep(1500);
@@ -34,7 +36,6 @@ public class Main {
                 value = new ScoreHeuristic().getValue(state);
                 if(value > score)
                     score = value;
-
 
                 state = action.getResult(state);
                 Utils.spawn(state);
@@ -54,4 +55,6 @@ public class Main {
         board[0][2] = 2;
         return board;
     }
+
+
 }
