@@ -7,6 +7,8 @@ import model.heuristic.Heuristic;
 import model.heuristic.HighestNumber;
 import util.Utils;
 
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -14,6 +16,7 @@ import java.util.Set;
 
 public class MCTS implements AI {
     private static final Double MIN_VALUE = -Double.MAX_VALUE;
+    private static final double MAX_VALUE = Double.MAX_VALUE;
 
     private Heuristic heuristic;
     private Node root;
@@ -31,6 +34,7 @@ public class MCTS implements AI {
         double probability = 1;
         Action action;
         List<Node> children = new ArrayList<>();
+        boolean white = true;
 
         public Node(State state, Node parent) {
             this.state = state;
@@ -66,8 +70,11 @@ public class MCTS implements AI {
         if (root == null)
             return new Node(state, null);
 
-        for (Node child : root.children) if (child.state.equals(state))
-                return child;
+        for (Node child : root.children)
+            for(Node grandchild : child.children) if (grandchild.state.equals(state)){
+                grandchild.parent = null;
+                return grandchild;
+            }
 
         throw new IllegalStateException("Root not found");
     }
@@ -75,17 +82,21 @@ public class MCTS implements AI {
     private void expansion(Node node) {
         State state = node.state;
         Set<Action> actions = state.getActions();
-        for (Action action : actions){
+        actions.forEach(action -> {
             State result = action.getResult(state);
+            Node actionChild = new Node(result, node);
+            actionChild.white = false;
+            actionChild.action = action;
             Utils.getPossibleSpawns(result).forEach(spawn -> {
-                Node child = new Node(spawn.getState(), node);
-                child.probability = spawn.getProbability();
-                child.action = action;
-                node.children.add(child);
-                double outcome = simulate(child);
-                backpropagate(child, outcome);
+                Node resultChild = new Node(spawn.getState(), actionChild);
+                resultChild.probability = spawn.getProbability();
+                resultChild.action = action;
+                actionChild.children.add(resultChild);
+                double outcome = simulate(resultChild);
+                backpropagate(resultChild, outcome);
             });
-        }
+            node.children.add(actionChild);
+        });
     }
 
     private void backpropagate(Node node, double outcome) {

@@ -7,19 +7,20 @@ public class Smoothness implements Heuristic {
     @Override
     public double getValue(State state) {
         int[][] board = state.getBoard();
-        int horizontal = 0;
-        int vertical = 0;
+        int delta = 0;
         for (int i = 0; i < board.length; i++){
-            for (int j = 1; j < board.length; j++){
-                if (board[i][j] == -1) continue;
-                if (board[i][j-1] > board[i][j]){
-                    horizontal += board[i][j-1] - board[i][j];
+            for (int j = 0; j < board[i].length; j++){
+                int value = board[i][j];
+                if(i > 1){
+                    int previous = board[i-1][j];
+                    delta += Math.abs(previous - value);
                 }
-                if (board[j-1][i] > board[j][i]){
-                    vertical += board[j-1][i] - board[j][i];
+                if(j > 1){
+                    int previous = board[i][j-1];
+                    delta += Math.abs(previous - value);
                 }
             }
         }
-        return horizontal + vertical;
+        return delta;
     }
 }
