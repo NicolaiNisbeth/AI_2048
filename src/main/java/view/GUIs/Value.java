@@ -20,7 +20,17 @@ public enum Value {
     _256 (256,  0xf9f6f2, 0xedcc61),
     _512 (512,  0xf9f6f2, 0xedc850),
     _1024(1024, 0xf9f6f2, 0xedc53f),
-    _2048(2048, 0xf9f6f2, 0xedc22e);
+    _2048(2048, 0xf9f6f2, 0xedc22e),
+    _4096(4096, 0xf9f6f2, 0xedc22e),
+    _8192(8192, 0xf9f6f2, 0xedc22e),
+    _16384(16384, 0xf9f6f2, 0xedc22e),
+    _32768(32768, 0xf9f6f2, 0xedc22e),
+    _65536(65536, 0xf9f6f2, 0xedc22e),
+    _131072(131072, 0xf9f6f2, 0xedc22e),
+    _262144(262144, 0xf9f6f2, 0xedc22e),
+    _5242888(524288, 0xf9f6f2, 0xedc22e),
+    _1048576(1048576, 0xf9f6f2, 0xedc22e);
+
 
     private final int score;
 
@@ -32,6 +42,8 @@ public enum Value {
         score = n;
         color = new Color(c);
         fontColor = new Color(f);
+
+
     }
 
     /**

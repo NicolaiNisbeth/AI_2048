@@ -17,6 +17,7 @@ import model.heuristic.youmadethis.SmallExponentGrid;
 import model.heuristic.youmadethis.SmallSnake;
 import model.heuristic.youmadethis.SnakeHeuristic;
 import util.Utils;
+import view.Grafic_UI;
 import view.TextGUI;
 
 import javax.swing.*;
@@ -24,9 +25,10 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        TextGUI textGUI = new TextGUI();
+
+        Grafic_UI GUI = new Grafic_UI();
         double score = 0;
-        int iterations = 10;
+        int iterations = 1;
         double sum = 0;
         for (int i = 1; i <= iterations; i++) {
             int[][] board = setupBoard();
@@ -38,7 +40,7 @@ public class Main {
             double value = 0;
             while(!state.getActions().isEmpty()) {
 
-                //textGUI.show(state);
+                GUI.show(state);
                 Action action = ai.getAction(state);
                 //System.out.println(action);
 
