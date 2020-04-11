@@ -14,10 +14,12 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-
+        double[] freqs = new double[8];
+        int temp = 128;
         Grafic_UI GUI = new Grafic_UI();
-        double score = 0;
-        int iterations = 4;
+        double maxScore = 0;
+        double minScore = Integer.MAX_VALUE;
+        int iterations = 100;
         double sum = 0;
         for (int i = 1; i <= iterations; i++) {
             int[][] board = setupBoard();
@@ -34,10 +36,6 @@ public class Main {
                 //System.out.println(action);
 
                 value = new ScoreHeuristic().getValue(state);
-                if(value > score)
-                    score = value;
-
-
                 state = action.getResult(state);
                 Utils.spawn(state);
             }
@@ -48,12 +46,19 @@ public class Main {
             else{
                 GUI.lose();
                 Grafic_UI.playSound("/loss.wav");
-                break;
             }
             sum += value;
+            minScore = Math.min(minScore, value);
+            maxScore = Math.max(maxScore, value);
             System.out.println(String.format("%d\t=\t%f", i, value));
+            bookkeeping(freqs, value);
         }
-        System.out.println(String.format("max = %f\naverage = %f", score, sum/iterations));
+        System.out.println(String.format("n = %d", iterations));
+        for (double d : freqs){
+            System.out.println(String.format("%d:\t%3.2f%%", temp, (d/iterations)*100));
+            temp <<= 1;
+        }
+        System.out.println(String.format("max\t\t= %f\naverage\t= %f\nmin\t\t= %f", maxScore, sum/iterations, minScore));
     }
 
     public static int[][] setupBoard(){
@@ -64,5 +69,17 @@ public class Main {
         //board[startLocation/4][startLocation%4] = 2;
         board[0][2] = 2;
         return board;
+    }
+
+    private static void bookkeeping(double[] stats, double value) {
+        int v = (int)value;
+        if (v >= 128) stats[0]++;
+        if (v >= 256) stats[1]++;
+        if (v >= 512) stats[2]++;
+        if (v >= 1024) stats[3]++;
+        if (v >= 2048) stats[4]++;
+        if (v >= 4096) stats[5]++;
+        if (v >= 8192) stats[6]++;
+        if (v >= 16384) stats[7]++;
     }
 }

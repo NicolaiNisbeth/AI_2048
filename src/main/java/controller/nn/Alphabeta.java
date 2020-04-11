@@ -1,17 +1,11 @@
 package controller.nn;
 
 import controller.AI;
+import model.Result;
 import model.State;
 import model.action.Action;
 import model.heuristic.Heuristic;
-import model.heuristic.nn.NnHeauristic;
-import util.Pair;
-
-import java.util.ArrayList;
-
-import static util.Utils.copyBoard;
-import static util.Utils.getEmptySquares;
-import static util.Utils.spawn;
+import util.Utils;
 
 public class Alphabeta implements AI {
 
@@ -55,19 +49,10 @@ public class Alphabeta implements AI {
             return value;
         }
         else {
-            // Compute random tile states
-            ArrayList<State> children = new ArrayList<>();
-            State temp = new State(copyBoard(parent));
-            for (Pair<Integer, Integer> coordinates : getEmptySquares(parent)){
-                spawn(temp, coordinates, 2);
-                children.add(new State(copyBoard(temp)));
-                spawn(temp, coordinates, 4);
-                children.add(new State(copyBoard(temp)));
-                spawn(temp, coordinates, -1);
-            }
 
             double value = Integer.MAX_VALUE;
-            for (State child : children){
+            for (Result result : Utils.getPossibleSpawns(parent)){
+                State child = result.getState();
                 value = Math.min(value, alphabeta(child, depth-1, alpha, beta, true));
                 beta = Math.min(beta, value);
                 if (alpha >= beta) break;
