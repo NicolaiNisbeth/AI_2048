@@ -9,7 +9,6 @@ import model.heuristic.nn.Cocktail;
 import util.Utils;
 import view.Grafic_UI;
 
-import java.io.File;
 import java.util.Arrays;
 
 public class Main {
@@ -26,24 +25,22 @@ public class Main {
             State state = new State(board);
             AI ai = new ExpectiMax(2);
             ai.setHeuristics(outcome ->
-                new Cocktail().getValue(outcome)
+                    new Cocktail().getValue(outcome)
             );
             double value = 0;
-            while(!state.getActions().isEmpty()) {
+            while (!state.getActions().isEmpty()) {
 
                 GUI.show(state);
                 Action action = ai.getAction(state);
-                //System.out.println(action);
 
                 value = new ScoreHeuristic().getValue(state);
                 state = action.getResult(state);
                 Utils.spawn(state);
             }
-            if(new HighestNumber().getValue(state) >= 2048){
+            if (new HighestNumber().getValue(state) >= 2048) {
                 GUI.win();
                 Grafic_UI.playSound("/win.wav");
-            }
-            else{
+            } else {
                 GUI.lose();
                 Grafic_UI.playSound("/loss.wav");
             }
@@ -54,25 +51,24 @@ public class Main {
             bookkeeping(freqs, value);
         }
         System.out.println(String.format("n = %d", iterations));
-        for (double d : freqs){
-            System.out.println(String.format("%d:\t%3.2f%%", temp, (d/iterations)*100));
+        for (double d : freqs) {
+            System.out.println(String.format("%d:\t%3.2f%%", temp, (d / iterations) * 100));
             temp <<= 1;
         }
-        System.out.println(String.format("max\t\t= %f\naverage\t= %f\nmin\t\t= %f", maxScore, sum/iterations, minScore));
+        System.out.println(String.format("max\t\t= %f\naverage\t= %f\nmin\t\t= %f", maxScore, sum / iterations, minScore));
     }
 
-    public static int[][] setupBoard(){
+    public static int[][] setupBoard() {
         int[][] board = new int[4][4];
-        for(int[] row : board)
+        for (int[] row : board)
             Arrays.fill(row, -1);
-        //int startLocation = (int) (Math.random() * 16);
-        //board[startLocation/4][startLocation%4] = 2;
-        board[0][2] = 2;
+        int startLocation = (int) (Math.random() * 16);
+        board[startLocation/4][startLocation%4] = 2;
         return board;
     }
 
     private static void bookkeeping(double[] stats, double value) {
-        int v = (int)value;
+        int v = (int) value;
         if (v >= 128) stats[0]++;
         if (v >= 256) stats[1]++;
         if (v >= 512) stats[2]++;
