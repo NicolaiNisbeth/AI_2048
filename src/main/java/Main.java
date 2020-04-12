@@ -1,6 +1,7 @@
 import controller.AI;
 import controller.MCTS2;
 import controller.HelpAIonestep;
+import controller.jd.ExpectiMax;
 import controller.jd.MiniMaxi;
 import model.action.DownSwipe;
 import model.action.LeftSwipe;
@@ -37,9 +38,9 @@ public class Main {
             Tracker stats = new Tracker();
             int[][] board = setupBoard();
             State state = new State(board);
-            AI ai = new MiniMaxi(4);
+            AI ai = new ExpectiMax(3);
             ai.setHeuristics(outcome ->
-                    new EmptySquares().getValue(outcome)
+                    new Cocktail().getValue(outcome)
             );
             double value = 0;
             while (!state.getActions().isEmpty()) {

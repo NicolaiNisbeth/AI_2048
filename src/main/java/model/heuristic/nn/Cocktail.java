@@ -3,6 +3,7 @@ package model.heuristic.nn;
 import model.State;
 import model.heuristic.Heuristic;
 import model.heuristic.ScoreHeuristic;
+import model.heuristic.NewSmallExponentGrid;
 import model.heuristic.SmallExponentGrid;
 import util.Utils;
 
