@@ -30,7 +30,7 @@ public class Main {
     public static void main(String[] args) {
         double[] frequencies = new double[8];
         int temp = 128;
-        //GUI gui = new GUI();
+        GUI gui = new GUI();
         double maxScore = Integer.MIN_VALUE;
         double minScore = Integer.MAX_VALUE;
         int iterations = 100;
@@ -39,7 +39,7 @@ public class Main {
             Tracker stats = new Tracker();
             int[][] board = setupBoard();
             State state = new State(board);
-            AI ai = new MiniMaxi(3);
+            AI ai = new ExpectiMax(3);
             ai.setHeuristics(outcome ->
                     //new ScoreHeuristic().getValue(outcome)
                     new Cocktail().getValue(outcome)
@@ -47,7 +47,7 @@ public class Main {
             double value = 0;
             while (!state.getActions().isEmpty()) {
 
-                //gui.show(state);
+                gui.show(state);
                 Action action = ai.getAction(state);
                 stats.track(action);
 
