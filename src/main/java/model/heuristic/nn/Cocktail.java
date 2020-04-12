@@ -3,12 +3,8 @@ package model.heuristic.nn;
 import model.State;
 import model.heuristic.Heuristic;
 import model.heuristic.ScoreHeuristic;
-import model.heuristic.WinLoss;
-import model.heuristic.youmadethis.SmallExponentGrid;
-import model.heuristic.youmadethis.SmallMultipleGrid;
+import model.heuristic.SmallExponentGrid;
 import util.Utils;
-
-import java.util.Arrays;
 
 public class Cocktail implements Heuristic {
     @Override

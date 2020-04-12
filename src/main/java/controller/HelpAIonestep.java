@@ -6,7 +6,7 @@ import model.action.Action;
 import model.heuristic.Heuristic;
 import model.heuristic.ScoreHeuristic;
 
-public class helpAIonestep implements AI {
+public class HelpAIonestep implements AI {
 	
 	Heuristic heuristic ; 
 

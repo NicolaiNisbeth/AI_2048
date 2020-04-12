@@ -1,8 +1,6 @@
 import controller.AI;
-import controller.jd.ExpectiMax;
-import controller.jd.MiniMaxi;
-import controller.nn.Alphabeta;
-import controller.nn.Minimax;
+import controller.MCTS2;
+import controller.HelpAIonestep;
 import model.action.DownSwipe;
 import model.action.LeftSwipe;
 import model.action.RightSwipe;
@@ -31,13 +29,13 @@ public class Main {
         GUI gui = new GUI();
         double maxScore = Integer.MIN_VALUE;
         double minScore = Integer.MAX_VALUE;
-        int iterations = 10;
+        int iterations = 1;
         double sum = 0;
         for (int i = 1; i <= iterations; i++) {
             Tracker stats = new Tracker();
             int[][] board = setupBoard();
             State state = new State(board);
-            AI ai = new Alphabeta(2);
+            AI ai = new MCTS2(10, new HelpAIonestep());
             ai.setHeuristics(outcome ->
                     new Cocktail().getValue(outcome)
             );

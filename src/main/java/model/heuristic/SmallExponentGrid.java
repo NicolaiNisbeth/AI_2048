@@ -1,4 +1,4 @@
-package model.heuristic.youmadethis;
+package model.heuristic;
 
 import model.State;
 import model.heuristic.Heuristic;
