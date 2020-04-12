@@ -40,13 +40,6 @@ public class Cocktail implements Heuristic {
             deltas[i] = delta;
         }
 
-        /*
-        double sum = 0, merges = 0, empty = 0;
-        boolean[] monotonous = new boolean[4];
-        int[] deltas = new int[4];
-        int moves;
-         */
-
         double evaluation = 0;
         if(moves == 0){
             evaluation -= 500_000_000;
