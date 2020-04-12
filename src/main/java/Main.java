@@ -1,8 +1,8 @@
 import controller.AI;
+import controller.MCTS2;
+import controller.HelpAIonestep;
 import controller.jd.ExpectiMax;
 import controller.jd.MiniMaxi;
-import controller.nn.Alphabeta;
-import controller.nn.Minimax;
 import model.action.DownSwipe;
 import model.action.LeftSwipe;
 import model.action.RightSwipe;
@@ -13,6 +13,7 @@ import model.State;
 import model.action.Action;
 import model.heuristic.nn.Cocktail;
 
+import model.heuristic.nn.EmptySquares;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
@@ -37,7 +38,7 @@ public class Main {
             Tracker stats = new Tracker();
             int[][] board = setupBoard();
             State state = new State(board);
-            AI ai = new Alphabeta(2);
+            AI ai = new ExpectiMax(3);
             ai.setHeuristics(outcome ->
                     new Cocktail().getValue(outcome)
             );
