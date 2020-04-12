@@ -10,8 +10,8 @@ public class SmallExponentGrid implements Heuristic {
         return topLeft(board);
     }
 
-    private int topLeft(int[][] board) {
-        int value = 0;
+    private double topLeft(int[][] board) {
+        long value = 0;
         value += Math.pow(board[0][0] == -1 ? 0 : board[0][0], 4);
         value += Math.pow(board[0][1] == -1 ? 0 : board[0][1], 3);
         value += Math.pow(board[0][2] == -1 ? 0 : board[0][2], 2);
