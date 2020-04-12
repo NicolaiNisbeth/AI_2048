@@ -2,6 +2,12 @@ package util;
 
 import model.Result;
 import model.State;
+import model.action.Action;
+import model.action.DownSwipe;
+import model.action.LeftSwipe;
+import model.action.RightSwipe;
+import model.action.UpSwipe;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
@@ -59,5 +65,14 @@ public class Utils {
             spawns.add(new Result(state4, 0.1));
         }
         return spawns;
+    }
+
+    public static Set<Action > getAllActions(){
+    	Set<Action> allActions = new HashSet<Action>() ; 
+    	allActions.add(new UpSwipe()) ; 
+    	allActions.add(new DownSwipe()) ; 
+    	allActions.add(new LeftSwipe()) ; 
+    	allActions.add(new RightSwipe()) ; 
+    	return allActions ; 
     }
 }
