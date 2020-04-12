@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="55b7f747-c506-4f02-8ae2-34f7e17ee5c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/SmallExponentGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/heuristic/SmallExponentGrid.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,13 +20,13 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="UPDATE_TYPE" value="MERGE" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="MCTS_BLACK_WHITE" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -140,10 +140,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.RightSwipeTest" />
+        <item itemvalue="JUnit.DownSwipeTest" />
         <item itemvalue="Application.GUI2048" />
         <item itemvalue="Application.Capture" />
-        <item itemvalue="JUnit.DownSwipeTest" />
-        <item itemvalue="JUnit.DownSwipeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -492,29 +492,33 @@
     </state>
     <state x="505" y="69" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586688835772" />
     <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586683747998" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1586713824256">
+    <state x="2012" y="92" width="1736" height="976" key="DiffContextDialog" timestamp="1586716209092">
+      <screen x="1920" y="0" width="1920" height="1160" />
+    </state>
+    <state x="2012" y="92" width="1736" height="976" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1586716209092" />
+    <state width="1877" height="284" key="GridCell.Tab.0.bottom" timestamp="1586716379685">
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
     <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586690986603" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1586713824256" />
+    <state width="1877" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1586716379685" />
     <state width="1804" height="319" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586683747998" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center" timestamp="1586713824255">
+    <state width="1877" height="284" key="GridCell.Tab.0.center" timestamp="1586716379685">
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
     <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586690986602" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1586713824255" />
+    <state width="1877" height="284" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1586716379685" />
     <state width="1804" height="319" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586683747998" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left" timestamp="1586713824255">
+    <state width="1877" height="284" key="GridCell.Tab.0.left" timestamp="1586716379685">
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
     <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586690986602" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1586713824255" />
+    <state width="1877" height="284" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1586716379685" />
     <state width="1804" height="319" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586683747998" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right" timestamp="1586713824256">
+    <state width="1877" height="284" key="GridCell.Tab.0.right" timestamp="1586716379685">
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
     <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586690986603" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1586713824256" />
+    <state width="1877" height="284" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1586716379685" />
     <state width="1804" height="319" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586683747998" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1586713824256">
       <screen x="1920" y="0" width="1920" height="1160" />
@@ -549,6 +553,10 @@
     </state>
     <state x="700" y="271" key="MultipleFileMergeDialog/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586683893741" />
     <state x="700" y="271" width="580" height="571" key="MultipleFileMergeDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586683747998" />
+    <state x="2012" y="92" width="1736" height="976" key="ShowDiffWithBranchDialog" timestamp="1586716209092">
+      <screen x="1920" y="0" width="1920" height="1160" />
+    </state>
+    <state x="2012" y="92" width="1736" height="976" key="ShowDiffWithBranchDialog/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1586716209092" />
     <state x="747" y="237" key="VCS.ChangeListViewerDialog" timestamp="1586683747998" />
     <state x="747" y="237" key="VCS.ChangeListViewerDialog/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586683747998" />
     <state x="540" y="259" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1586688841031">
