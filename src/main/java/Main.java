@@ -1,6 +1,7 @@
 import controller.AI;
 import controller.MCTS2;
 import controller.HelpAIonestep;
+import controller.jd.MiniMaxi;
 import model.action.DownSwipe;
 import model.action.LeftSwipe;
 import model.action.RightSwipe;
@@ -11,6 +12,7 @@ import model.State;
 import model.action.Action;
 import model.heuristic.nn.Cocktail;
 
+import model.heuristic.nn.EmptySquares;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
@@ -29,15 +31,15 @@ public class Main {
         GUI gui = new GUI();
         double maxScore = Integer.MIN_VALUE;
         double minScore = Integer.MAX_VALUE;
-        int iterations = 1;
+        int iterations = 10;
         double sum = 0;
         for (int i = 1; i <= iterations; i++) {
             Tracker stats = new Tracker();
             int[][] board = setupBoard();
             State state = new State(board);
-            AI ai = new MCTS2(10, new HelpAIonestep());
+            AI ai = new MiniMaxi(4);
             ai.setHeuristics(outcome ->
-                    new Cocktail().getValue(outcome)
+                    new EmptySquares().getValue(outcome)
             );
             double value = 0;
             while (!state.getActions().isEmpty()) {
