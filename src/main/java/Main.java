@@ -33,13 +33,13 @@ public class Main {
         //GUI gui = new GUI();
         double maxScore = Integer.MIN_VALUE;
         double minScore = Integer.MAX_VALUE;
-        int iterations = 50;
+        int iterations = 100;
         double sum = 0;
         for (int i = 1; i <= iterations; i++) {
             Tracker stats = new Tracker();
             int[][] board = setupBoard();
             State state = new State(board);
-            AI ai = new ExpectiMax(2);
+            AI ai = new MiniMaxi(3);
             ai.setHeuristics(outcome ->
                     //new ScoreHeuristic().getValue(outcome)
                     new Cocktail().getValue(outcome)
