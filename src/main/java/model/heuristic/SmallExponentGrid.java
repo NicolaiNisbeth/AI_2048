@@ -24,7 +24,7 @@ public class SmallExponentGrid implements Heuristic {
         value += Math.pow(board[2][0] == -1 ? 0 : board[2][0], 2);
         value += Math.pow(board[2][1] == -1 ? 0 : board[2][1], 1);
 
-        value += Math.pow(board[3][0] == -1 ? 0 : board[3][0], 1);
+        //value += Math.pow(board[3][0] == -1 ? 0 : board[3][0], 1);
         return value;
     }
 }
