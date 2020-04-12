@@ -68,7 +68,7 @@ public class Main {
             minScore = Math.min(minScore, value);
             maxScore = Math.max(maxScore, value);
             System.out.println(String.format("%d\t=\t%f", i, value));
-            bookkeeping(frequencies, value);
+            bookkeeping(frequencies, new HighestNumber().getValue(state));
         }
         System.out.println(String.format("n = %d", iterations));
         for (double d : frequencies) {
