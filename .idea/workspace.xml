@@ -110,6 +110,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.LeftSwipeTest" />
+      <item itemvalue="JUnit.LeftSwipeTest.validateAction (1)" />
+      <item itemvalue="JUnit.DownSwipeTest" />
+      <item itemvalue="JUnit.RightSwipeTest" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
