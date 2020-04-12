@@ -1,14 +1,25 @@
 import controller.AI;
 import controller.jd.ExpectiMax;
+import model.action.DownSwipe;
+import model.action.LeftSwipe;
+import model.action.RightSwipe;
+import model.action.UpSwipe;
 import model.heuristic.HighestNumber;
 import model.heuristic.ScoreHeuristic;
 import model.State;
 import model.action.Action;
 import model.heuristic.nn.Cocktail;
 
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartUtilities;
+import org.jfree.chart.JFreeChart;
+import org.jfree.data.general.DefaultPieDataset;
 import util.Utils;
 import view.Grafic_UI;
 
+import javax.sound.midi.Track;
+import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 
 public class Main {
@@ -21,6 +32,7 @@ public class Main {
         int iterations = 100;
         double sum = 0;
         for (int i = 1; i <= iterations; i++) {
+            Tracker stats = new Tracker();
             int[][] board = setupBoard();
             State state = new State(board);
             AI ai = new ExpectiMax(2);
@@ -32,17 +44,21 @@ public class Main {
 
                 GUI.show(state);
                 Action action = ai.getAction(state);
+                stats.track(action);
 
                 value = new ScoreHeuristic().getValue(state);
                 state = action.getResult(state);
                 Utils.spawn(state);
             }
+            stats.show();
+
             if (new HighestNumber().getValue(state) >= 2048) {
                 GUI.win();
                 Grafic_UI.playSound("/win.wav");
             } else {
                 GUI.lose();
                 Grafic_UI.playSound("/loss.wav");
+                break;
             }
             sum += value;
             minScore = Math.min(minScore, value);
@@ -77,5 +93,37 @@ public class Main {
         if (v >= 4096) stats[5]++;
         if (v >= 8192) stats[6]++;
         if (v >= 16384) stats[7]++;
+    }
+
+    private static class Tracker {
+
+        private static final int UP = 0, DOWN = 1, LEFT = 2, RIGHT = 3;
+        int[] actions = new int[4];
+
+        public void show(){
+            DefaultPieDataset actionPie = new DefaultPieDataset();
+            actionPie.setValue("Swipe Down", actions[DOWN]);
+            actionPie.setValue("Swipe Right", actions[RIGHT]);
+            actionPie.setValue("Swipe Up", actions[UP]);
+            actionPie.setValue("Swipe Left", actions[LEFT]);
+            JFreeChart actionChart = ChartFactory.createPieChart("Action Distribution", actionPie, true, false, false);
+            try {
+                ChartUtilities.saveChartAsPNG(new File("test.png"), actionChart, 400, 400);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        public void track(Action action){
+            if(action instanceof UpSwipe)
+                actions[UP]++;
+            if(action instanceof DownSwipe)
+                actions[DOWN]++;
+            if(action instanceof LeftSwipe)
+                actions[LEFT]++;
+            if(action instanceof RightSwipe)
+                actions[RIGHT]++;
+        }
+
     }
 }
