@@ -1,10 +1,10 @@
-package view.GUIs;
+package view.lib;
 /* all code is taken from https://github.com/Alwayswithme/2048.java/blob/master/src/phx/Board.java
  * 10/4 2020
  * */
 import java.util.HashMap;
 
-import static view.GUIs.Value.*;
+import static view.lib.Value.*;
 
 public class Tile {
     private final Value val;

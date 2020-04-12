@@ -1,10 +1,10 @@
-package view.GUIs;
+package view.lib;
 
 /* all code is taken from https://github.com/Alwayswithme/2048.java/blob/master/src/phx/Board.java
 * 10/4 2020
 * */
 
-import view.Grafic_UI;
+import view.GUI;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,13 +19,13 @@ public class Board extends JPanel {
     /* this array use for convenience iterate */
     public static final int[] _0123 = { 0, 1, 2, 3 };
 
-    final Grafic_UI host;
+    final GUI host;
 
     public Tile[] tiles;
 
     public static Value GOAL = Value._2048;
 
-    public Board(Grafic_UI f) {
+    public Board(GUI f) {
         host = f;
         setFocusable(true);
         initTiles();

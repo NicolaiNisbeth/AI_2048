@@ -5,7 +5,7 @@ import model.action.*;
 
 import java.util.Scanner;
 
-public class TextGUI implements GUI {
+public class TextUI implements IGUI {
 
     private Scanner scanner = new Scanner(System.in);
 

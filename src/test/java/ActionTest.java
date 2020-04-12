@@ -1,7 +1,7 @@
 import model.State;
 import model.action.*;
 import util.Pair;
-import view.TextGUI;
+import view.TextUI;
 
 import static org.junit.Assert.assertEquals;
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ public abstract class ActionTest {
 
     private State initialState;
     private Action action;
-    private TextGUI textGUI;
+    private TextUI textUI;
     protected Pair<int[], int[]> initialSums, updatedSums;
 
     protected abstract Action createAction();
@@ -21,14 +21,14 @@ public abstract class ActionTest {
     public void setUp() {
         action = createAction();
         initialState = new State(Main.setupBoard());
-        textGUI = new TextGUI();
+        textUI = new TextUI();
     }
 
     @org.junit.After
     public void tearDown() {
         action = null;
         initialState = null;
-        textGUI = null;
+        textUI = null;
         initialSums = null;
         updatedSums = null;
     }
@@ -39,14 +39,14 @@ public abstract class ActionTest {
         System.out.println("\n"+action.getClass());
         System.out.println("## RANDOM DATA ##");
         System.out.println("Initial state");
-        textGUI.show(initialState);
+        textUI.show(initialState);
 
         initialSums = getRowColSums(initialState.getBoard());
         State updatedState = action.getResult(initialState);
         updatedSums = getRowColSums(updatedState.getBoard());
 
         System.out.println("Our state");
-        textGUI.show(updatedState);
+        textUI.show(updatedState);
 
         // hardcoded data
         System.out.println("\n## HARDCODED DATA ##");
@@ -54,14 +54,14 @@ public abstract class ActionTest {
         for (Pair<int[][], int[][]> test : testdata){
             initialState = new State(test.getFirst());
             System.out.println("Initial state");
-            textGUI.show(initialState);
+            textUI.show(initialState);
 
             updatedState = action.getResult(initialState);
             System.out.println("Our state");
-            textGUI.show(updatedState);
+            textUI.show(updatedState);
 
             System.out.println("Correct state");
-            textGUI.show(new State(test.getSecond()));
+            textUI.show(new State(test.getSecond()));
 
             assertTrue(Arrays.deepEquals(updatedState.getBoard(), test.getSecond()));
         }
