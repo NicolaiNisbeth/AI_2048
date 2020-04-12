@@ -1,4 +1,5 @@
 import controller.AI;
+import controller.MCTS;
 import controller.MCTS2;
 import controller.HelpAIonestep;
 import controller.jd.ExpectiMax;
@@ -32,14 +33,15 @@ public class Main {
         GUI gui = new GUI();
         double maxScore = Integer.MIN_VALUE;
         double minScore = Integer.MAX_VALUE;
-        int iterations = 10;
+        int iterations = 100;
         double sum = 0;
         for (int i = 1; i <= iterations; i++) {
             Tracker stats = new Tracker();
             int[][] board = setupBoard();
             State state = new State(board);
-            AI ai = new ExpectiMax(3);
+            AI ai = new ExpectiMax(2);
             ai.setHeuristics(outcome ->
+                    //new ScoreHeuristic().getValue(outcome)
                     new Cocktail().getValue(outcome)
             );
             double value = 0;

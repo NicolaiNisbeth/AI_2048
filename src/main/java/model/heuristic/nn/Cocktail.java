@@ -49,7 +49,7 @@ public class Cocktail implements Heuristic {
 
         double evaluation = 0;
         if(moves == 0){
-            return Integer.MIN_VALUE;
+            evaluation -= 500_000_000;
         }
         evaluation += sum;
         evaluation += merges * sum / 10;
