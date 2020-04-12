@@ -33,7 +33,7 @@ public class Main {
         //GUI gui = new GUI();
         double maxScore = Integer.MIN_VALUE;
         double minScore = Integer.MAX_VALUE;
-        int iterations = 100;
+        int iterations = 50;
         double sum = 0;
         for (int i = 1; i <= iterations; i++) {
             Tracker stats = new Tracker();
