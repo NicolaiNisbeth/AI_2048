@@ -30,7 +30,7 @@ public class Main {
     public static void main(String[] args) {
         double[] frequencies = new double[8];
         int temp = 128;
-        GUI gui = new GUI();
+        //GUI gui = new GUI();
         double maxScore = Integer.MIN_VALUE;
         double minScore = Integer.MAX_VALUE;
         int iterations = 100;
@@ -47,7 +47,7 @@ public class Main {
             double value = 0;
             while (!state.getActions().isEmpty()) {
 
-                gui.show(state);
+                //gui.show(state);
                 Action action = ai.getAction(state);
                 stats.track(action);
 
@@ -58,11 +58,11 @@ public class Main {
             stats.show();
 
             if (new HighestNumber().getValue(state) >= 2048) {
-                gui.win();
-                GUI.playSound("/win.wav");
+                //gui.win();
+                //GUI.playSound("/win.wav");
             } else {
-                gui.lose();
-                GUI.playSound("/loss.wav");
+                //gui.lose();
+                //GUI.playSound("/loss.wav");
             }
             sum += value;
             minScore = Math.min(minScore, value);
