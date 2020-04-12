@@ -7,7 +7,6 @@ import model.action.Action;
 import model.heuristic.Heuristic;
 import util.Utils;
 
-import java.util.List;
 import java.util.Set;
 
 public class MiniMaxi implements AI {
@@ -25,7 +24,7 @@ public class MiniMaxi implements AI {
         double max = Integer.MIN_VALUE;
         Action maxAction = null;
         for(Action action : actions){
-            double value = getValue(action, state, 1);
+            double value = minimizer(action, state, Integer.MIN_VALUE, Integer.MAX_VALUE, 1);
             System.out.println(value + " " + action);
             if(value >= max){
                 max = value;
@@ -35,22 +34,23 @@ public class MiniMaxi implements AI {
         return maxAction;
     }
 
-    private double getValue(Action action, State parent, int depth) {
+    private double minimizer(Action action, State parent, double alpha, double beta, int depth) {
         State state = action.getResult(parent);
         Set<Result> results = Utils.getPossibleSpawns(state);
         double min = Integer.MAX_VALUE;
         for(Result result : results){
             State resultState = result.getState();
-            double probability = result.getProbability();
-            double resultValue = probability * getValue(resultState, depth);
-            if(resultValue < min){
-                min = resultValue;
+            double value = maximizer(resultState, depth, alpha, beta);
+            if(value < min){
+                min = value;
             }
+            beta = Math.min(beta, min);
+            if (value <= alpha) break;
         }
         return min;
     }
 
-    private double getValue(State state, int depth){
+    private double maximizer(State state, int depth, double alpha, double beta){
         Set<Action> actions = state.getActions();
         boolean leaf = actions.size() == 0 || depth >= maxDepth;
         if(leaf){
@@ -59,10 +59,12 @@ public class MiniMaxi implements AI {
 
         double max = Integer.MIN_VALUE;
         for(Action action : actions){
-            double value = getValue(action, state, depth+1);
+            double value = minimizer(action, state, alpha, beta, depth+1);
             if(value > max){
                 max = value;
             }
+            alpha = Math.max(alpha, value);
+            if (value >= beta) break;
         }
         return max;
     }
