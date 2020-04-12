@@ -3,6 +3,7 @@ package model.heuristic.nn;
 import model.State;
 import model.heuristic.Heuristic;
 import model.heuristic.ScoreHeuristic;
+import model.heuristic.WinLoss;
 import model.heuristic.youmadethis.SmallExponentGrid;
 import model.heuristic.youmadethis.SmallMultipleGrid;
 import util.Utils;
@@ -51,7 +52,7 @@ public class Cocktail implements Heuristic {
 
         double evaluation = 0;
         if(moves == 0){
-            evaluation -= 500_000_000;
+            return Integer.MIN_VALUE;
         }
         evaluation += sum;
         evaluation += merges * sum / 10;
