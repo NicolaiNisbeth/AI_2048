@@ -2,6 +2,7 @@ package controller;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Queue;
 import java.util.Set;
 
 import model.State;
@@ -12,9 +13,15 @@ import util.Utils;
 
 public class MCTS2 implements AI {
 
+	private Heuristic heuristic ; 
 	private Action lastAction;
+	private int selection_iteration ; 
 	private int iteration;
+	private boolean done_search_root = false; 
+	int simulation_iteration = 2 ; 
+	int simulation_depth = 200 ; 
 	private Node root;
+	private int round = 0 ; 
 	private static final double infinity = Double.MAX_VALUE;
 	private final Set<Action> allActions = Utils.getAllActions();
 	AI simBot;
@@ -48,6 +55,7 @@ public class MCTS2 implements AI {
 	@Override
 	public Action getAction(State state) {
 		// TODO Auto-generated method stub
+		round ++ ; 
 		Set<Action> legalActions = new HashSet<Action > () ; 
 		for(Action action : allActions)
 			if(Utils.getEmptySquares(action.getResult(state)).size() != 0)
@@ -66,29 +74,39 @@ public class MCTS2 implements AI {
 		}
 		else
 			root = trimTree(state);
+		done_search_root = false ;
 		
 		for (int i = 0; i < iteration; ++i) {
 			//System.out.println(i + " th selection iteration " ) ;
-			Node n = selection(root);
-			double score = 0;
-			if (n.allLegalActions.isEmpty()) {
-				score = new ScoreHeuristic().getValue(n.state);
-				backpropagate(n, score);
-			} else {
-				Node nodeToSimulate = n ; 
-				if(n.n > 0 || n == root) {
-					expand(n);
-					Action random = n.state.getRandomAction();
-					for (Node child : n.children)
-						if (child.action_from_parent.equals(random)) {
-							nodeToSimulate = child ; 
-						}
+			ArrayList<Node> bp_node = new ArrayList <Node> () ;
+			ArrayList<Double> bp_score = new ArrayList<Double> () ; 
+			//selection_iteration = (root.children.isEmpty() ? 1 : Utils.getEmptySquares(child.action_from_parent.getResult(node.state)).size() * 2 );
+			selection_iteration  = 1 ; 
+			for(int j = 0 ; j <  selection_iteration  ; j++ ) {
+				Node n = selection(root);
+				double score = 0;
+				if (n.allLegalActions.isEmpty()) {
+					score = new ScoreHeuristic().getValue(n.state);
+					backpropagate(n, score);
+				} else {
+					Node nodeToSimulate = n ; 
+					if(n.n > 0 || n == root) {
+						expand(n);
+						Action random = n.state.getRandomAction();
+						for (Node child : n.children)
+							if (child.action_from_parent.equals(random)) {
+								nodeToSimulate = child ; 
+							}
+					}
+					score = simulate(nodeToSimulate);
+					bp_node.add(nodeToSimulate)  ;
+					bp_score.add(score) ; 
 				}
-				score = simulate(nodeToSimulate);
-				backpropagate(nodeToSimulate, score);
 			}
+			for(int k = 0 ; k < bp_node.size() ; k ++ )
+				backpropagate( bp_node.get(k), bp_score.get(k)) ; 
 		}
-		lastAction = getBestAct(root);
+		lastAction = findMaxChild(root).action_from_parent ;
 		return lastAction;
 	}
 
@@ -98,10 +116,12 @@ public class MCTS2 implements AI {
 		Utils.spawn(node.state);
 		State state = node.state;
 		double average = 0 ; 
-		int run = 20 ; 
-		for(int i = 0 ; i < run ; i++ ) {
+		
+		for(int i = 0 ; i < simulation_iteration ; i++ ) {
 			double value = 0;
-			while (!state.getActions().isEmpty()) {
+			int k  = 0 ; 
+			while (!state.getActions().isEmpty() && k < simulation_depth ) {
+				k++ ; 
 				Action action_ = simBot.getAction(state);
 				state = action_.getResult(state);
 				Utils.spawn(state);
@@ -109,25 +129,9 @@ public class MCTS2 implements AI {
 			value = new ScoreHeuristic().getValue(state);
 			average += value ; 
 		}
-		average /= run ; 
+		average /= simulation_iteration ; 
 
 		return average ;
-	}
-
-	private Action getBestAct(Node root) {
-		// TODO Auto-generated method
-		double maxUCB = 0;
-		Action result = null;
-		for (Action action : root.allLegalActions)
-			for (Node child : root.children) {
-				if (child.UCB > maxUCB && child.action_from_parent.equals(action)) {
-					maxUCB = child.UCB;
-					result = child.action_from_parent;
-				}
-			}
-		if(result == null)
-			throw new IllegalArgumentException("cannot find best action ") ; 
-		return result;
 	}
 
 	double UCB(Node node) {
@@ -166,8 +170,32 @@ public class MCTS2 implements AI {
  		
 		if (node.children.isEmpty() || (node.allLegalActions.isEmpty()))// terminate condition
 			return node;
-		Node result = null;
-		double maxUCB = 0;
+		Node result = null ; 
+		if(node == root && done_search_root == false ) {
+			for(Node child : root.children)
+			{	
+				double selectionBuffer = Math.log(iteration / allActions.size()) * Utils.getEmptySquares(child.action_from_parent.getResult(node.state)).size() * 2 ; 
+				double selectionBufferMax = iteration / 2.0 / node.allLegalActions.size() ; 
+				if(child.n < (selectionBuffer < selectionBufferMax  ? selectionBuffer : selectionBufferMax ))
+					result = child ; 
+			}
+		}
+		if(result == null) {
+			done_search_root = true ; 
+			result = findMaxChild(node) ;
+		}
+		if(result == null && node == root )
+			throw new IllegalStateException("cannot select because trim tree problem " ) ; 
+		result.state = result.action_from_parent.getResult(node.state);
+		Utils.spawn(result.state);
+		result.allLegalActions = result.state.getActions();
+		//System.out.println("choose : " + result.action_from_parent.toString() + " UCB : " + UCB(result) + "\n"); 
+		return selection(result);
+	}
+
+	private Node findMaxChild(Node node) {
+		Node result = null ; 
+		double maxUCB = - infinity ;
 		for (Action action : node.allLegalActions)
 			for (Node child : node.children) {
 				if(child.action_from_parent.equals(action)) {
@@ -176,26 +204,17 @@ public class MCTS2 implements AI {
 					if (child.UCB > maxUCB ) {
 						result = child;
 						maxUCB = child.UCB  ;
-						if(Utils.getEmptySquares(result.action_from_parent.getResult(node.state)).size() == 0)
-							throw new IllegalStateException("Illegal Action") ;
+						
 					}
 				}
 			}
-		if(result == null & node == root )
-			throw new IllegalStateException("cannot select because trim tree problem " ) ; 
-		result.state = result.action_from_parent.getResult(node.state);
-		if(Utils.getEmptySquares(result.state).size() == 0)
-			throw new IllegalStateException("Illegal Action") ; 
-		Utils.spawn(result.state);
-		result.allLegalActions = result.state.getActions();
-		//System.out.println("choose : " + result.action_from_parent.toString() + " UCB : " + UCB(result) + "\n"); 
-		return selection(result);
+		return result ; 
 	}
-
+	
 	private Node trimTree(State state ) {
 		Node newRoot = null ; 
 		for (Node child : root.children) {
-			if (child.action_from_parent == lastAction)
+			if (child.action_from_parent.equals(lastAction))
 				newRoot = child ; 
 		}
 		if(newRoot == null )
@@ -241,6 +260,7 @@ public class MCTS2 implements AI {
 	public void setHeuristics(Heuristic heuristic) {
 		// TODO Auto-generated method stub
 		simBot.setHeuristics(heuristic);
+		this.heuristic = heuristic ; 
 	}
 
 }
