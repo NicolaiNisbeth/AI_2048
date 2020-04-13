@@ -2,13 +2,13 @@ package controller;
 
 import java.util.ArrayList;
 
+import action.Action;
+import heuristic.Heuristic;
 import model.State;
-import model.action.Action;
-import model.heuristic.Heuristic;
 
 public class TwoBrains implements AI {
 
-	Heuristic heuristic ; 
+	Heuristic heuristic ;
 	ArrayList<Double> last_heuristics_diff = new ArrayList<Double> () ; 
 	double average_heuristics_diff  ; 
 	int round = 0 ; 
