@@ -3,7 +3,7 @@ package view;
  * 10/4 2020
  * */
 import model.State;
-import model.action.Action;
+import action.Action;
 import view.lib.Board;
 import view.lib.Tile;
 import view.lib.Value;

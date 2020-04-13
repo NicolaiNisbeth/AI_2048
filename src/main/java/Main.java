@@ -1,57 +1,55 @@
 import controller.AI;
+import controller.ExpectiMax;
+import action.DownSwipe;
+import action.LeftSwipe;
+import action.RightSwipe;
+import action.UpSwipe;
+import controller.HelpAIonestep;
 import controller.MCTS;
 import controller.MCTS2;
-import controller.HelpAIonestep;
-import controller.jd.ExpectiMax;
-import controller.jd.MiniMaxi;
-import model.action.DownSwipe;
-import model.action.LeftSwipe;
-import model.action.RightSwipe;
-import model.action.UpSwipe;
-import model.heuristic.HighestNumber;
-import model.heuristic.ScoreHeuristic;
+import controller.MiniMaxi;
+import heuristic.HighestNumber;
+import heuristic.ScoreHeuristic;
 import model.State;
-import model.action.Action;
-import model.heuristic.nn.Cocktail;
-
-import model.heuristic.nn.EmptySquares;
+import action.Action;
+import heuristic.Cocktail;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.general.DefaultPieDataset;
 import util.Utils;
 import view.GUI;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args) {
-        double[] frequencies = new double[8];
-        int temp = 128;
+    private static final double[] frequencies = new double[8];
+    private static double maxScore = Integer.MIN_VALUE;
+    private static double minScore = Integer.MAX_VALUE;
+    private static final int iterations = 100;
+    private static double sum = 0;
+    private static int temp = 128;
+
+    public static void main(String[] args) throws InterruptedException {
         GUI gui = new GUI();
-        double maxScore = Integer.MIN_VALUE;
-        double minScore = Integer.MAX_VALUE;
-        int iterations = 100;
-        double sum = 0;
+
         for (int i = 1; i <= iterations; i++) {
             Tracker stats = new Tracker();
-            int[][] board = setupBoard();
-            State state = new State(board);
+            State state = new State(setupBoard());
             AI ai = new ExpectiMax(3);
-            ai.setHeuristics(outcome ->
-                    //new ScoreHeuristic().getValue(outcome)
-                    new Cocktail().getValue(outcome)
-            );
-            double value = 0;
-            while (!state.getActions().isEmpty()) {
+            //AI ai = new MCTS(100);
+            //AI ai = new MCTS2(100, new HelpAIonestep());
+            //AI ai = new MiniMaxi(2);
+            ai.setHeuristics(outcome -> new Cocktail().getValue(outcome));
 
+            double gameScore = 0;
+            while (!state.getActions().isEmpty()) {
                 gui.show(state);
                 Action action = ai.getAction(state);
                 stats.track(action);
-
-                value = new ScoreHeuristic().getValue(state);
+                //Thread.sleep(1000);
+                gameScore = new ScoreHeuristic().getValue(state);
                 state = action.getResult(state);
                 Utils.spawn(state);
             }
@@ -64,18 +62,13 @@ public class Main {
                 //gui.lose();
                 //GUI.playSound("/loss.wav");
             }
-            sum += value;
-            minScore = Math.min(minScore, value);
-            maxScore = Math.max(maxScore, value);
-            System.out.println(String.format("%d\t=\t%f", i, value));
-            bookkeeping(frequencies, new HighestNumber().getValue(state));
+            sum += gameScore;
+            minScore = Math.min(minScore, gameScore);
+            maxScore = Math.max(maxScore, gameScore);
+            bookkeeping(new HighestNumber().getValue(state));
+            System.out.println(String.format("%d\t=\t%f", i, gameScore));
         }
-        System.out.println(String.format("n = %d", iterations));
-        for (double d : frequencies) {
-            System.out.println(String.format("%d:\t%3.2f%%", temp, (d / iterations) * 100));
-            temp <<= 1;
-        }
-        System.out.println(String.format("max\t\t= %f\naverage\t= %f\nmin\t\t= %f", maxScore, sum / iterations, minScore));
+        printStatistics();
     }
 
     public static int[][] setupBoard() {
@@ -87,16 +80,25 @@ public class Main {
         return board;
     }
 
-    private static void bookkeeping(double[] stats, double value) {
+    private static void printStatistics() {
+        System.out.println(String.format("n = %d", iterations));
+        for (double d : frequencies) {
+            System.out.println(String.format("%d:\t%3.2f%%", temp, (d / iterations) * 100));
+            temp <<= 1;
+        }
+        System.out.println(String.format("max\t\t= %f\naverage\t= %f\nmin\t\t= %f", maxScore, sum / iterations, minScore));
+    }
+
+    private static void bookkeeping(double value) {
         int v = (int) value;
-        if (v >= 128) stats[0]++;
-        if (v >= 256) stats[1]++;
-        if (v >= 512) stats[2]++;
-        if (v >= 1024) stats[3]++;
-        if (v >= 2048) stats[4]++;
-        if (v >= 4096) stats[5]++;
-        if (v >= 8192) stats[6]++;
-        if (v >= 16384) stats[7]++;
+        if (v >= 128) frequencies[0]++;
+        if (v >= 256) frequencies[1]++;
+        if (v >= 512) frequencies[2]++;
+        if (v >= 1024) frequencies[3]++;
+        if (v >= 2048) frequencies[4]++;
+        if (v >= 4096) frequencies[5]++;
+        if (v >= 8192) frequencies[6]++;
+        if (v >= 16384) frequencies[7]++;
     }
 
     private static class Tracker {

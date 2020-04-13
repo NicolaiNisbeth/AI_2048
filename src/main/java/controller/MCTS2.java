@@ -4,12 +4,10 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-import controller.AI;
-import model.Result;
 import model.State;
-import model.action.Action;
-import model.heuristic.Heuristic;
-import model.heuristic.ScoreHeuristic;
+import action.Action;
+import heuristic.Heuristic;
+import heuristic.ScoreHeuristic;
 import util.Utils;
 
 public class MCTS2 implements AI {

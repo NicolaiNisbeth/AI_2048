@@ -1,9 +1,8 @@
-package model.heuristic;
+package heuristic;
 
 import model.State;
-import model.heuristic.Heuristic;
 
-public class NewSmallExponentGrid implements Heuristic {
+public class MaxSmallExponentGrid implements Heuristic {
 
     @Override
     public double getValue(State state) {

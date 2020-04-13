@@ -1,13 +1,11 @@
-package controller.jd;
+package controller;
 
-import controller.AI;
 import model.Result;
 import model.State;
-import model.action.Action;
-import model.heuristic.Heuristic;
+import action.Action;
+import heuristic.Heuristic;
 import util.Utils;
 
-import java.util.List;
 import java.util.Set;
 
 public class ExpectiMax implements AI {

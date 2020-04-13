@@ -1,5 +1,5 @@
-import model.action.Action;
-import model.action.RightSwipe;
+import action.Action;
+import action.RightSwipe;
 
 import java.util.Arrays;
 

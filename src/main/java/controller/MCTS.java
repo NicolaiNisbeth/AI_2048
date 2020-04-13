@@ -1,16 +1,11 @@
 package controller;
 
-import javafx.scene.transform.Shear;
 import model.State;
-import model.action.Action;
-import model.heuristic.Heuristic;
-import model.heuristic.HighestNumber;
+import action.Action;
+import heuristic.Heuristic;
 import util.Utils;
 
-import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 
@@ -62,7 +57,7 @@ public class MCTS implements AI {
         }
         if(maxNode == null) return null;
 
-        System.out.println("Evaluation: " + maxNode.score / maxNode.visited);
+        //System.out.println("Evaluation: " + maxNode.score / maxNode.visited);
         return maxNode.action;
     }
 

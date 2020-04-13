@@ -1,7 +1,7 @@
 package view;
 
 import model.State;
-import model.action.Action;
+import action.Action;
 
 public interface IGUI {
     void show(State state);

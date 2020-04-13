@@ -1,16 +1,16 @@
-package model.action;
+package action;
 
 import model.State;
 import util.Utils;
 
-public class UpSwipe implements Action {
+public class DownSwipe implements Action {
 
     @Override
     public State getResult(State state) {
         int[][] board = Utils.copyBoard(state);
         for (int j = 0; j < board[0].length; j++) {
-            int head = 0;
-            for (int i = 1; i < board.length; i++) {
+            int head = board.length-1;
+            for (int i = board.length-2; i >= 0; i--) {
                 int value = board[i][j];
                 if(value == -1)
                     continue;
@@ -18,10 +18,10 @@ public class UpSwipe implements Action {
                     board[head][j] = value;
                     board[i][j] = -1;
                 } else if (board[head][j] == value) {
-                    board[head++][j] += value;
+                    board[head--][j] += value;
                     board[i][j] = -1;
                 } else {
-                    if(i != ++head){
+                    if(i != --head){
                         board[i][j] = -1;
                     }
                     board[head][j] = value;
@@ -33,6 +33,6 @@ public class UpSwipe implements Action {
 
     @Override
     public boolean equals(Object o) {
-        return(o instanceof UpSwipe);
+        return(o instanceof DownSwipe);
     }
 }

@@ -1,7 +1,7 @@
 package view;
 
 import model.State;
-import model.action.*;
+import action.*;
 
 import java.util.Scanner;
 

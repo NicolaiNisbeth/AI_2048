@@ -1,9 +1,8 @@
-package controller.jd;
+package controller;
 
-import controller.AI;
 import model.State;
-import model.action.Action;
-import model.heuristic.Heuristic;
+import action.Action;
+import heuristic.Heuristic;
 
 import java.util.Iterator;
 import java.util.Set;

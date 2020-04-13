@@ -1,4 +1,4 @@
-package model.heuristic;
+package heuristic;
 
 import model.State;
 

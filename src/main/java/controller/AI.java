@@ -1,8 +1,8 @@
 package controller;
 
 import model.State;
-import model.action.Action;
-import model.heuristic.Heuristic;
+import action.Action;
+import heuristic.Heuristic;
 
 public interface AI {
     Action getAction(State state);

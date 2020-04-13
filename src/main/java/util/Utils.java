@@ -2,11 +2,11 @@ package util;
 
 import model.Result;
 import model.State;
-import model.action.Action;
-import model.action.DownSwipe;
-import model.action.LeftSwipe;
-import model.action.RightSwipe;
-import model.action.UpSwipe;
+import action.Action;
+import action.DownSwipe;
+import action.LeftSwipe;
+import action.RightSwipe;
+import action.UpSwipe;
 
 import java.util.ArrayList;
 import java.util.HashSet;

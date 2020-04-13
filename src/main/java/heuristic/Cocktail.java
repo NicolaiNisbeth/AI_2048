@@ -1,10 +1,6 @@
-package model.heuristic.nn;
+package heuristic;
 
 import model.State;
-import model.heuristic.Heuristic;
-import model.heuristic.ScoreHeuristic;
-import model.heuristic.NewSmallExponentGrid;
-import model.heuristic.SmallExponentGrid;
 import util.Utils;
 
 public class Cocktail implements Heuristic {

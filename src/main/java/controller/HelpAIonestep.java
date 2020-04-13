@@ -1,10 +1,8 @@
 package controller;
 
-import controller.AI;
 import model.State;
-import model.action.Action;
-import model.heuristic.Heuristic;
-import model.heuristic.ScoreHeuristic;
+import action.Action;
+import heuristic.Heuristic;
 
 public class HelpAIonestep implements AI {
 	

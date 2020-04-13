@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55b7f747-c506-4f02-8ae2-34f7e17ee5c5" name="Default Changelist" comment="">
+    <list default="true" id="55b7f747-c506-4f02-8ae2-34f7e17ee5c5" name="Default Changelist" comment="Ready to go!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/HelpAIonestep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/HelpAIonestep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MCTS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MCTS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MCTS2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MCTS2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/jd/ExpectiMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ExpectiMax.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/jd/MiniMaxi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MiniMaxi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/jd/Random.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Random.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/action/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/action/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/action/DownSwipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/action/DownSwipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/action/LeftSwipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/action/LeftSwipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/action/RightSwipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/action/RightSwipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/action/UpSwipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/action/UpSwipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/CenterBad.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/Corners.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/Heuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heuristic/Heuristic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/HighestNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heuristic/HighestNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/NewSmallExponentGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heuristic/NewSmallExponentGrid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/ScoreHeuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heuristic/ScoreHeuristic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/SmallExponentGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heuristic/SmallExponentGrid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/WinLoss.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/nn/Cocktail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heuristic/Cocktail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/nn/EmptySquares.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/nn/LocationOfHighValueBlocks.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/nn/Merges.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/nn/NnHeauristic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/heuristic/nn/Smoothness.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/IGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/IGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/TextUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/TextUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ActionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ActionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DownSwipeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DownSwipeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LeftSwipeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LeftSwipeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RightSwipeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RightSwipeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UpSwipeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UpSwipeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,23 +88,24 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="view.GUI" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Michael\Documents\AI_2048\src\main\resrouces" />
-      <recent name="$PROJECT_DIR$/src/main/java" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
       <recent name="view" />
       <recent name="model.action" />
-      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Michael\Documents\AI_2048\src\main\resrouces" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Michael\Documents\AI_2048\src\main\resrouces" />
@@ -488,10 +525,21 @@
     </state>
     <state x="761" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586688744792" />
     <state x="803" y="266" width="374" height="582" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1586683747998" />
-    <state x="616" y="481" width="783" height="152" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1586683747998" />
+    <state x="2610" y="296" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1586771007931">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2610" y="296" key="#com.intellij.ide.util.PackageChooserDialog/62.0.1858.1080/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586771007931" />
+    <state x="616" y="481" width="783" height="152" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1586771016550">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="616" y="481" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/62.0.1858.1080/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586771016550" />
     <state x="616" y="481" width="783" height="152" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586683747998" />
     <state x="748" y="414" width="494" height="297" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586683747998" />
     <state x="748" y="414" width="494" height="297" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/70.27.1850.1053@70.27.1850.1053" timestamp="1586683747998" />
+    <state x="2676" y="400" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1586771018024">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2676" y="400" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/62.0.1858.1080/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586771018024" />
     <state x="747" y="161" width="476" height="799" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586684362842">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -501,39 +549,44 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586684651774" />
-    <state x="505" y="69" width="865" height="919" key="CommitChangelistDialog2" timestamp="1586718103892">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2425" y="69" width="865" height="919" key="CommitChangelistDialog2" timestamp="1586772679907">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="505" y="69" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586718103892" />
+    <state x="505" y="69" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586717878111" />
     <state x="2425" y="77" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1586716530753" />
+    <state x="2425" y="69" key="CommitChangelistDialog2/62.0.1858.1080/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586772679907" />
     <state x="557" y="97" width="865" height="919" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586683747998" />
     <state x="2012" y="92" width="1736" height="976" key="DiffContextDialog" timestamp="1586716209092">
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
     <state x="2012" y="92" width="1736" height="976" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1586716209092" />
-    <state width="1877" height="436" key="GridCell.Tab.0.bottom" timestamp="1586717900277">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="359" key="GridCell.Tab.0.bottom" timestamp="1586772643623">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="436" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586717900277" />
     <state width="1877" height="399" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1586717355905" />
+    <state width="1877" height="359" key="GridCell.Tab.0.bottom/62.0.1858.1080/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586772643623" />
     <state width="1804" height="319" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586683747998" />
-    <state width="1877" height="436" key="GridCell.Tab.0.center" timestamp="1586717900276">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="359" key="GridCell.Tab.0.center" timestamp="1586772643622">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="436" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586717900276" />
     <state width="1877" height="399" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1586717355905" />
+    <state width="1877" height="359" key="GridCell.Tab.0.center/62.0.1858.1080/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586772643622" />
     <state width="1804" height="319" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586683747998" />
-    <state width="1877" height="436" key="GridCell.Tab.0.left" timestamp="1586717900276">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="359" key="GridCell.Tab.0.left" timestamp="1586772643622">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="436" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586717900276" />
     <state width="1877" height="399" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1586717355905" />
+    <state width="1877" height="359" key="GridCell.Tab.0.left/62.0.1858.1080/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586772643622" />
     <state width="1804" height="319" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586683747998" />
-    <state width="1877" height="436" key="GridCell.Tab.0.right" timestamp="1586717900277">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="359" key="GridCell.Tab.0.right" timestamp="1586772643622">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="436" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586717900277" />
     <state width="1877" height="399" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1586717355905" />
+    <state width="1877" height="359" key="GridCell.Tab.0.right/62.0.1858.1080/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586772643622" />
     <state width="1804" height="319" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586683747998" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1586713824256">
       <screen x="1920" y="0" width="1920" height="1160" />
@@ -563,22 +616,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="214" y="129" key="MergeDialog/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586683891543" />
-    <state x="2620" y="302" width="580" height="571" key="MultipleFileMergeDialog" timestamp="1586716549474">
-      <screen x="1920" y="0" width="1920" height="1160" />
+    <state x="2620" y="271" width="580" height="571" key="MultipleFileMergeDialog" timestamp="1586770130430">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="700" y="271" key="MultipleFileMergeDialog/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586683893741" />
     <state x="2620" y="302" key="MultipleFileMergeDialog/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1586716549474" />
+    <state x="2620" y="271" key="MultipleFileMergeDialog/62.0.1858.1080/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586770130430" />
     <state x="700" y="271" width="580" height="571" key="MultipleFileMergeDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586683747998" />
     <state x="2012" y="92" width="1736" height="976" key="ShowDiffWithBranchDialog" timestamp="1586716209092">
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
     <state x="2012" y="92" width="1736" height="976" key="ShowDiffWithBranchDialog/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1586716209092" />
-    <state x="747" y="237" key="VCS.ChangeListViewerDialog" timestamp="1586683747998" />
+    <state x="747" y="237" key="VCS.ChangeListViewerDialog" timestamp="1586770119876">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
     <state x="747" y="237" key="VCS.ChangeListViewerDialog/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586683747998" />
-    <state x="540" y="259" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1586718109728">
+    <state x="747" y="237" key="VCS.ChangeListViewerDialog/62.0.1858.1080/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586770119876" />
+    <state x="540" y="259" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1586718093130">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="540" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586718109728" />
+    <state x="540" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586718093130" />
     <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1586683747998" />
     <state x="2576" y="405" key="com.intellij.ide.util.TipDialog" timestamp="1586714341336">
       <screen x="1920" y="0" width="1920" height="1160" />
@@ -586,11 +643,12 @@
     <state x="2576" y="405" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1586714341336" />
     <state x="648" y="150" width="683" height="813" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586683747998" />
     <state x="648" y="150" width="683" height="813" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1586683747998" />
-    <state x="719" y="440" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586717861276">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2639" y="440" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586770123944">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="719" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586717861276" />
     <state x="2639" y="491" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1586716536478" />
+    <state x="2639" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/62.0.1858.1080/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586770123944" />
     <state x="763" y="473" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/70.27.1850.1053@70.27.1850.1053" timestamp="1586683747998" />
     <state x="702" y="141" key="refactoring.ChangeSignatureDialog" timestamp="1586683747998" />
     <state x="702" y="141" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1586683747998" />
@@ -601,14 +659,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/heuristic/NewSmallExponentGrid.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/heuristic/NewSmallExponentGrid.java</url>
           <line>22</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

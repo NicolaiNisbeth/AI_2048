@@ -1,5 +1,5 @@
 import model.State;
-import model.action.*;
+import action.*;
 import util.Pair;
 import view.TextUI;
 
