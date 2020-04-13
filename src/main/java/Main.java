@@ -8,6 +8,7 @@ import controller.HelpAIonestep;
 import controller.MCTS;
 import controller.MCTS2;
 import controller.MiniMaxi;
+import controller.Random;
 import heuristic.HighestNumber;
 import heuristic.ScoreHeuristic;
 import model.State;
@@ -41,6 +42,7 @@ public class Main {
             //AI ai = new MCTS(100);
             //AI ai = new MCTS2(100, new HelpAIonestep());
             //AI ai = new MiniMaxi(2);
+            //AI ai = new Random();
             ai.setHeuristics(outcome -> new Cocktail().getValue(outcome));
 
             double gameScore = 0;
